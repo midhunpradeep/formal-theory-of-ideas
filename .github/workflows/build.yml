@@ -22,9 +22,9 @@ jobs:
         run: |
           for file in content/*.md; do
             name=$(basename "$file" .md)
-            pandoc "$file" -s -o "public/$name.html" --toc --toc-depth=2 --metadata title="$name"
+            pandoc "$file" -s -o "public/$name.html" --toc --toc-depth=2
           done
-          pandoc index.md -s -o public/index.html
+          pandoc index.md -s -o public/index.html --metadata title="Index"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
