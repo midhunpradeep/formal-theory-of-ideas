@@ -1,4 +1,6 @@
-# A Formal Theory of Ideas via Minimal Binary Abstraction: Structure, Uniqueness, and Generative Complexity from a Single Primitive
+% A Formal Theory of Ideas via Minimal Binary Abstraction: Structure, Uniqueness, and Generative Complexity from a Single Primitive
+% Midhun Pradeep Nair, ChatGPT-4o
+% April 13, 2025
 
 ## Abstract
 
