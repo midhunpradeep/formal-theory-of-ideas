@@ -9,6 +9,7 @@
 - [The Formal Theory of Ideas - The Boring One](formal-theory-of-ideas.html)
 - [The Interface Theory of Ideas - The More Interesting One](interface-theory-of-ideas.html)
 - [Scientific Discovery as Recursive Modal Projection](scientific-discovery-as-recursive-modal-projection.html)
+- [Survivable Structure - A short essay on the Survivability of Ideas across Modalities](survivable-structure.html)
 
 ### What is this? Who the heck are you?
 
