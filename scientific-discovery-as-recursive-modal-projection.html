@@ -175,595 +175,1648 @@ Projection</h1>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#abstract"
-id="toc-abstract"><strong>Abstract</strong></a></li>
-<li><a href="#introduction" id="toc-introduction"><strong>1.
-Introduction</strong></a></li>
-<li><a href="#the-interface-theory-of-ideas"
-id="toc-the-interface-theory-of-ideas"><strong>2. The Interface Theory
-of Ideas</strong></a></li>
-<li><a href="#modal-architecture-of-scientific-discovery"
-id="toc-modal-architecture-of-scientific-discovery"><strong>3. Modal
-Architecture of Scientific Discovery</strong></a></li>
+<li><a href="#abstract" id="toc-abstract">Abstract</a></li>
+<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
 <li><a
-href="#implications-of-modal-equivalence-and-recursive-expression"
-id="toc-implications-of-modal-equivalence-and-recursive-expression"><strong>4.
-Implications of Modal Equivalence and Recursive
-Expression</strong></a></li>
-<li><a href="#philosophical-and-epistemic-implications"
-id="toc-philosophical-and-epistemic-implications"><strong>5.
-Philosophical and Epistemic Implications</strong></a></li>
-<li><a href="#conclusion-and-future-research"
-id="toc-conclusion-and-future-research"><strong>6. Conclusion and Future
-Research</strong></a></li>
+href="#theoretical-foundations-ideas-abstraction-and-modal-interfaces"
+id="toc-theoretical-foundations-ideas-abstraction-and-modal-interfaces">Theoretical
+Foundations: Ideas, Abstraction, and Modal Interfaces</a></li>
+<li><a href="#modal-interfaces-in-scientific-discovery"
+id="toc-modal-interfaces-in-scientific-discovery">Modal Interfaces in
+Scientific Discovery</a></li>
+<li><a href="#recursive-cycle-of-discovery-formal-model"
+id="toc-recursive-cycle-of-discovery-formal-model">Recursive Cycle of
+Discovery: Formal Model</a></li>
+<li><a
+href="#structural-loss-compensation-and-the-equivalence-of-interfaces"
+id="toc-structural-loss-compensation-and-the-equivalence-of-interfaces">Structural
+Loss, Compensation, and the Equivalence of Interfaces</a></li>
+<li><a href="#implications-for-knowledge-meaning-and-reality"
+id="toc-implications-for-knowledge-meaning-and-reality">Implications for
+Knowledge, Meaning, and Reality</a></li>
+<li><a href="#conclusion" id="toc-conclusion">Conclusion</a></li>
 </ul>
 </nav>
-<h2 id="abstract"><strong>Abstract</strong></h2>
-<p>We present a formal model of scientific discovery grounded in the
-Interface Theory of Ideas, in which all knowledge is understood as
-recursive structure filtered through expressive modalities. In this
-framework, we generalize the scientific method as a series of
-interlinked <strong>modal interfaces</strong>—each representing a phase
-of cognition, hypothesis, evaluation, or memory. Each modality acts as a
-projection filter, mapping abstract structure to constrained forms and
-incurring domain-specific loss. We formalize this loop as a dynamic
-system of compositionally recursive projection and refinement. This
-perspective dissolves the traditional boundary between internal
-reasoning and external observation, allowing for a unified understanding
-of learning, theory formation, and conceptual evolution. The result is a
-minimal and extensible framework that abstracts both human and machine
-discovery into a shared modal architecture.</p>
-<hr />
-<h2 id="introduction"><strong>1. Introduction</strong></h2>
-<p>Scientific discovery has long been modeled as a rational sequence:
-observation, hypothesis, prediction, experimentation, revision. Yet such
-models assume a clear distinction between thought and perception,
-between inner models and external truth. In contrast, the Interface
-Theory treats <strong>all knowledge as structure</strong>, and
-<strong>all cognition as projection through filters</strong>—called
-<strong>modalities</strong>.</p>
-<p>This paper extends that view. We propose that <strong>each phase of
-scientific reasoning itself behaves like a modality</strong>, complete
-with a domain of expression, a loss function, and an interface to
-structured ideas. What emerges is a recursive system of knowledge
-generation that can be analyzed, manipulated, and generalized in a
-formal setting.</p>
-<p>We begin by restating the minimal Interface Theory of Ideas. We then
-define modalities and loss-aware projection. From there, we generalize
-the scientific loop—showing that <strong>generation, projection,
-feedback, refinement, and memory</strong> can all be modeled as modal
-interfaces. Finally, we analyze the implications for learning,
-abstraction, and the foundations of discovery.</p>
-<hr />
-<h2 id="the-interface-theory-of-ideas"><strong>2. The Interface Theory
-of Ideas</strong></h2>
-<p>Let ( ) be the space of all ideas, generated recursively as:</p>
-<ul>
-<li>( ): the primitive idea<br />
-</li>
-<li>( A : ): binary abstraction operator<br />
-</li>
-<li>If ( i_1, i_2 ), then ( A(i_1, i_2) )</li>
-</ul>
-<p>Each idea is a finite, well-founded abstraction tree rooted in (
-).<br />
-Structure is the only criterion of identity: two ideas are equal iff
-their construction paths are identical.</p>
-<p>This system admits no intrinsic semantics—only <strong>structural
-form</strong>.</p>
-<hr />
-<h3 id="modalities-and-expression"><strong>2.1 Modalities and
-Expression</strong></h3>
-<p>Let ( ) be the space of all <strong>modalities</strong>, where each
-modality ( m ) is defined by a pair:</p>
-<ul>
-<li>( E_m : _m { _m } ): expression function<br />
-</li>
-<li>( L_m : ^+ {} ): loss function</li>
-</ul>
-<p>where:</p>
-<ul>
-<li>( _m ) is the range of possible expressions in modality ( m )<br />
-</li>
-<li>( _m ) is the null expression (i.e., unexpressible in ( m ))<br />
-</li>
-<li>( L_m(i) ) is the degree of structure lost under projection</li>
-</ul>
-<p>Ideas are not always expressible in every modality. The ability to be
-tested, remembered, or refined depends on <strong>which filters an idea
-can pass through</strong> and <strong>how much of it
-survives</strong>.</p>
-<h2 id="modal-architecture-of-scientific-discovery"><strong>3. Modal
-Architecture of Scientific Discovery</strong></h2>
-<p>Traditional models of scientific reasoning describe the discovery
-process as a linear or iterative cycle: observation, hypothesis,
-prediction, testing, revision. While effective for operational purposes,
-such models treat reasoning as sequential rather than structural, and
-presume clear distinctions between cognition and perception, theory and
-observation, self and world.</p>
-<p>In the Interface Theory, however, we dissolve these boundaries. Every
-stage of the scientific process can be reframed as <strong>a
-modality</strong>—that is, a filter through which ideas are projected,
-partially preserved, and shaped. Each modality has its own expressive
-constraints and its own <strong>loss function</strong>: a selective
-pressure that defines what survives and what is forgotten.</p>
-<p>We now formalize each phase of the discovery loop as such a
-<strong>modal interface</strong>, and show how they collectively compose
-a recursive and general system for abstraction-driven discovery.</p>
-<hr />
-<h3 id="hypothesis-generation-as-modal-projection"><strong>3.1
-Hypothesis Generation as Modal Projection</strong></h3>
-<p>Let us define the <strong>generation phase</strong>—the origin point
-of a scientific hypothesis—as a modality:</p>
-<p>[ m_{} ]</p>
-<h4 id="definition"><strong>Definition:</strong></h4>
-<ul>
-<li>( E_{m_{}}(p, x) := A(p, x) ): Apply a structural pattern ( p ) to a
-base idea ( x )</li>
-<li>( L_{m_{}}(i) ): Measures internal constraints on the generated
-idea—e.g., ill-formedness, circularity, overgeneralization, or
-redundancy</li>
-</ul>
-<p>This phase is <strong>not arbitrary creativity</strong>. Even
-generation operates under structural pressure:</p>
-<ul>
-<li>Generated ideas must be <strong>constructible</strong> from known
-parts</li>
-<li>They must be <strong>non-degenerate</strong>, meaning they do not
-trivially collapse (e.g., ( A(p, p) ))</li>
-<li>They must be <strong>minimally expressive</strong>, avoiding
-complete nullity in downstream modalities</li>
-</ul>
-<h4 id="interpretation"><strong>Interpretation:</strong></h4>
-<blockquote>
-<p>Generation is projection from prior structure.<br />
-Even creative thought is a function of previously retained abstractions,
-patterns, and structures.</p>
-</blockquote>
-<p>In practice, this is where analogy, metaphor, recombination, and
-generalization live. Every hypothesis is a <strong>tree grown from the
-soil of memory</strong>.</p>
-<hr />
-<h3 id="projection-into-external-modalities"><strong>3.2 Projection into
-External Modalities</strong></h3>
-<p>Let us now define the projection into <strong>observable or testable
-domains</strong>—classically associated with experimentation or
-prediction.</p>
-<p>Let ( m_{} ) be any <strong>external modality</strong>, such as:</p>
-<ul>
-<li>Empirical measurement</li>
-<li>Simulation</li>
-<li>Sensory input</li>
-<li>Social response</li>
-<li>Linguistic articulation</li>
-</ul>
-<p>Each provides an <strong>expression function</strong>: [ E_{m_{}}(i)
-<em>{m</em>{}} ] and a <strong>loss function</strong>: [ L_{m_{}}(i) = (
-i, ) ]</p>
-<p>Projection is successful if: - ( E_{m_{}}(i) <em>{m</em>{}} ) - Loss
-is below threshold: ( L_{m_{}}(i) &lt; )</p>
-<h4 id="interpretation-1"><strong>Interpretation:</strong></h4>
-<blockquote>
-<p>Empirical validation is not a truth-checking operation.<br />
-It is a structural expression filtered through physical or symbolic
-constraints.</p>
-</blockquote>
-<p>Thus, “reality” is treated as <strong>a modality</strong>—not as a
-ground of being, but as a <strong>filter on structure</strong>.</p>
-<hr />
-<h3 id="feedback-as-evaluation-modality"><strong>3.3 Feedback as
-Evaluation Modality</strong></h3>
-<p>Following projection, the system must <strong>evaluate</strong> what
-has survived. This gives rise to the evaluation modality:</p>
-<p>[ m_{} ]</p>
-<p>Where: - ( E_{m_{}}(i) := ) - ( L_{m_{}}(i) := )</p>
-<p>This modality aggregates signal from the projection:</p>
-<ul>
-<li>What was retained?</li>
-<li>What failed?</li>
-<li>How far did the result deviate from the generator’s structure?</li>
-</ul>
-<p>Evaluation is <strong>not semantic</strong>—it is a
-<strong>structural comparison</strong>, either to prior expectations,
-reference data, or desired patterns.</p>
-<h4 id="interpretation-2"><strong>Interpretation:</strong></h4>
-<blockquote>
-<p>Feedback is not interpretation.<br />
-It is comparison between the intended structure and the structure that
-survived.</p>
-</blockquote>
-<p>This is where loss-aware learning occurs. Structural mismatch becomes
-a <strong>signal for refinement</strong>.</p>
-<hr />
-<h3 id="refinement-as-modal-reprojection"><strong>3.4 Refinement as
-Modal Reprojection</strong></h3>
-<p>When feedback reveals a structural mismatch, the system must revise
-its idea. We now define <strong>refinement</strong> as a modality:</p>
-<p>[ m_{} ]</p>
-<p>This modality takes a previously generated idea ( i = A(p, x) ),
-possibly with feedback signal ( f <em>{m</em>{}} ), and produces a
-modified idea ( i’ ) through structured reconstruction.</p>
-<h4 id="expression-function"><strong>Expression Function:</strong></h4>
-<p>[ E_{m_{}}(i, f) := A(p’, x’) (p’, x’) (p, x) ] The refinement
-process may: - Replace or mutate pattern ( p ) - Prune or extend content
-( x ) - Adjust parameters or abstraction depth</p>
-<h4 id="loss-function"><strong>Loss Function:</strong></h4>
-<p>[ L_{m_{}}(i) := f ]</p>
-<p>This loss measures <strong>how much of the original idea is
-sacrificed</strong> to address the feedback, and penalizes
-overcorrection or loss of core structure.</p>
-<h4 id="interpretation-3"><strong>Interpretation:</strong></h4>
-<blockquote>
-<p>Refinement is not a clean fix—it is a <strong>negotiation</strong>
-between the original structure and the expressive limits of the
-projection modality.</p>
-</blockquote>
-<p>It is the point at which <strong>structure learns from
-projection</strong>, not by truth conditions, but by
-<strong>survival</strong>.</p>
-<hr />
-<h3 id="memory-as-internal-modal-projection"><strong>3.5 Memory as
-Internal Modal Projection</strong></h3>
-<p>Memory was previously defined as a data store. We now elevate it to a
-<strong>first-class modality</strong>:</p>
-<p>[ m_{} ]</p>
-<p>Where: - ( E_{m_{}}(i) ): the <strong>recalled structure</strong>
-from memory - ( L_{m_{}}(i) ): the <strong>retention loss</strong>—how
-far the retrieved idea deviates from the original</p>
-<p>This makes memory an <strong>internal filter</strong> on past
-structure. Ideas are not stored raw; they are reconstructed when needed,
-filtered by compression, decay, context, and priority.</p>
-<h4 id="structural-roles-of-memory">Structural Roles of Memory:</h4>
-<ul>
-<li>Provides source material for ( p ) and ( x ) in generation:<br />
-( A(p, x) ) where ( p, x <em>{m</em>{}} )</li>
-<li>Reinforces patterns that survive multiple cycles</li>
-<li>Supplies <strong>intermediate abstractions</strong> reused in later
-discovery</li>
-</ul>
-<h4 id="interpretation-4">Interpretation:</h4>
-<blockquote>
-<p>Memory is not a place. It is a <strong>filter on time.</strong><br />
-To remember an idea is to re-project it from within—imperfectly,
-recursively, contextually.</p>
-</blockquote>
-<p>This explains both creative generalization and conceptual drift.</p>
-<hr />
-<h3 id="the-discovery-circuit-as-modal-composition"><strong>3.6 The
-Discovery Circuit as Modal Composition</strong></h3>
-<p>We now define the full scientific reasoning system as a
-<strong>recursive circuit</strong> composed of modal projections.</p>
-<p>Let:</p>
-<ul>
-<li>( i_0 ): an initial seed or base concept</li>
-<li>( i_1 = E_{m_{}}(p, x) ): initial hypothesis</li>
-<li>( r = E_{m_{}}(i_1) ): projection into empirical modality</li>
-<li>( f = E_{m_{}}(i_1) ): feedback from the projection</li>
-<li>( i_2 = E_{m_{}}(i_1, f) ): refined structure</li>
-<li>( i_2’ = E_{m_{}}(i_2) ): recalled idea for future use</li>
-</ul>
-<p>This gives the compositional form:</p>
-<p>[ i_0 i_1 r f i_2 i_2’ ]</p>
-<p>Each ( m ) is now <strong>just another interface</strong>, not a
-privileged phase.<br />
-The system <strong>discovers</strong> not by stepping through a
-procedure, but by <strong>moving recursively across modal
-boundaries</strong>.</p>
-<hr />
+<h2 id="abstract">Abstract</h2>
+<p>We propose a rigorous scientific-philosophical framework that
+reconceives <strong>scientific discovery</strong> not as a linear
+sequence of methods, but as a <strong>recursive traversal across
+multiple modal interfaces</strong> of knowledge. Building on the
+<em>Interface Theory of Ideas</em> and a <em>Formal Theory of
+Ideas</em>, we formalize how observation, hypothesis, experimentation,
+evaluation, and memory can be viewed as <strong>equivalent modal
+projections</strong> within a unified system. Each stage of inquiry is
+modeled as an <strong>interface transformation</strong>: a mapping that
+imposes its own structure and attendant <strong>loss</strong> of
+information on the content it processes. We introduce a minimal formal
+vocabulary – including a fundamental <strong>primitive idea</strong>
+<span class="math inline"><em>π</em></span>, an <strong>abstraction
+operator</strong> <span class="math inline"><em>A</em></span>,
+<strong>modal projection</strong> functions for different modes of
+inquiry, and associated <strong>loss functions</strong> – to describe
+how complex ideas (e.g. scientific theories) emerge from simpler ones
+and are continually refined. The process of discovery becomes a
+<em>recursive loop</em>: ideas are generated and expressed in various
+modalities, filtered and partially lost in translation, then
+re-integrated and elevated through further abstraction. This monograph
+is aimed at an interdisciplinary audience spanning philosophy of
+science, cognitive science, AI theory, and epistemology. We maintain
+formal rigor (with definitions, equations, and if needed, theorems)
+alongside a poetical interpretive tone. Metaphors and analogies are used
+throughout to <strong>intuitively illuminate abstract notions</strong>.
+In the end, we discuss profound implications of this model for the
+nature of knowledge, meaning, reality, and scientific objectivity –
+suggesting that what we call “objective reality” may itself be the limit
+of an iterative interface process, forever filtering and projecting, yet
+gradually converging toward an <strong>ever-elusive truth</strong>.</p>
+<h2 id="introduction">Introduction</h2>
+<p>What does it mean to <strong>“discover”</strong> something
+scientifically? Classical views of the scientific method outline a
+series of discrete steps – observe, hypothesize, predict, test, conclude
+– as if scientific discovery were a procedural checklist. In contrast,
+recent perspectives in cognitive science and philosophy suggest a more
+fluid interplay: our <strong>perceptions and concepts</strong> mediate
+any access to reality (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=Human%20knowledge%20and%20experience%20are,full%20complexity%20of%20the%20world">The
+Interface Theory of Ideas</a>) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=The%20Interface%20Theory%20of%20Ideas,frames%20our%20sense%20of%20reality">The
+Interface Theory of Ideas</a>). In this monograph, we advance the idea
+that <strong>scientific discovery is not a simple sequence of
+procedures, but a recursive traversal across modal filters of
+understanding</strong>. In other words, each so-called “step”
+(observation, theorization, experimentation, etc.) is actually an
+instance of a common underlying operation: the <strong>modal
+projection</strong> of <em>ideas</em> from one representational mode to
+another. By <em>modal</em> we mean tied to a particular form or mode of
+representation – for example, the sensory modality of observation or the
+symbolic modality of theory. By <em>projection</em> we mean a mapping or
+translation of content into that mode, much like casting a
+multi-dimensional object onto a lower-dimensional screen, inevitably
+losing some detail in the process.</p>
+<p>Our approach builds on two theoretical pillars developed previously:
+an <strong>Interface Theory of Ideas</strong>, which posits that what we
+experience as reality is an interface of ideas rather than a direct
+window onto the world (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=The%20Interface%20Theory%20of%20Ideas,frames%20our%20sense%20of%20reality">The
+Interface Theory of Ideas</a>); and a <strong>Formal Theory of
+Ideas</strong>, which constructs a rigorous algebraic system for idea
+generation from a single primitive. Using these foundations, we will
+treat <em>scientific cognition</em> itself as an <em>interface
+system</em>. <strong>Observations</strong>, <strong>hypotheses</strong>,
+<strong>mathematical models</strong>, <strong>experimental
+data</strong>, and <strong>memory records</strong> will all be viewed as
+<strong>ideas expressed through different interfaces</strong>. The act
+of observing through a microscope, formulating a hypothesis, or
+interpreting a graph are, in our account, structurally similar
+processes: each is an <strong>idea undergoing a modal
+transformation</strong> – being filtered, compressed, or expanded
+according to the constraints of a given modality.</p>
+<p>To make this concrete, consider a simple analogy: <em>scientific
+inquiry as exploring a multi-faceted landscape with different
+tools</em>. In one phase you shine the light of observation,
+illuminating some features while leaving others in darkness. In the
+next, you put on the lens of theory, which brings certain patterns into
+sharp focus while blurring out raw details. Later, you use the
+instrument of experimentation, which chisels reality in a controlled
+way, isolating a facet for inspection but possibly altering it in the
+process. Finally, you archive what you learned in memory or in
+literature, akin to sketching a map that captures the essentials but
+cannot contain the full richness of the terrain. At each stage,
+something is <strong>gained</strong> – a structure, a generalization, a
+clarified signal – and something is <strong>lost</strong> – nuances,
+anomalies, the unfiltered complexity. <strong>Scientific discovery
+unfolds in the recursive cycling through these modes</strong>, each pass
+refining the “map” while acknowledging it is never the full
+“territory.”</p>
+<p>In what follows, we develop a formal model of this recursive
+multi-modal process. We begin by laying out the <strong>formal
+foundations</strong>: the notion of a <em>primitive idea</em> and how
+more complex ideas are built via an <em>abstraction operator</em> <span
+class="math inline"><em>A</em></span>. We then incorporate <strong>modal
+interfaces</strong>: formal projection functions that correspond to
+distinct modalities (observation, conceptualization, etc.), each with an
+inherent <strong>structural loss</strong> (filtering). With these tools,
+we construct an idealized <strong>cycle of discovery</strong> in formal
+terms, showing how an initial raw observation can climb upward into
+abstract theory and loop back down into predicted observation, in
+principle ad infinitum. Throughout, we maintain a dual perspective:
+<em>formally</em>, this is a system of sets, functions, and
+compositional operations; <em>philosophically</em>, it is a story about
+<strong>knowledge as a self-curating interface</strong>. We will
+interweave rigorous definitions with intuitive metaphors, aiming to keep
+the exposition accessible to readers from diverse disciplines while not
+shying away from technical precision.</p>
+<p>By reinterpreting scientific discovery as <strong>recursive modal
+projection</strong>, we hope to illuminate perennial questions in
+epistemology and philosophy of science. How do <strong>our observations
+relate to reality</strong>? (We will suggest they are <em>interface
+outputs</em> shaped by survival and sensorimotor constraints rather than
+mirrors of truth.) How do <strong>theories attain meaning</strong>? (We
+will argue meaning arises from their place in a <strong>network of ideas
+and projections</strong>, not in isolation.) What makes scientific
+knowledge seemingly <strong>objective</strong> and yet subject to
+change? (Our answer will point to the way iterative cross-modal checking
+– projections and back-projections – yields stable invariant structures
+that we mistake for an independent reality, even as the interface can
+evolve.) In the end, this exercise is both humbling and empowering:
+humbling, because it underscores the filters between us and any final
+Reality; empowering, because it shows how far we can go by cleverly
+<strong>traversing those filters</strong>. The concluding sections will
+reflect on these implications, suggesting that scientific objectivity,
+meaning, and reality itself can be understood as emergent properties of
+a <strong>projective, recursive epistemic interface</strong> rather than
+pregiven absolutes.</p>
 <h2
-id="implications-of-modal-equivalence-and-recursive-expression"><strong>4.
-Implications of Modal Equivalence and Recursive Expression</strong></h2>
-<p>Having reframed each phase of scientific reasoning as a modality, we
-are now in position to explore the deeper consequences of this
-architecture. This section presents a series of insights and
-generalizations that follow from treating the scientific method as
-<strong>recursive modal projection</strong>.</p>
-<hr />
-<h3 id="modal-equivalence"><strong>4.1 Modal Equivalence</strong></h3>
-<p>In the classical view, different phases of reasoning have
-fundamentally distinct roles: generation is creative, experimentation is
-empirical, memory is passive, and so on. But in our framework,
-<strong>each phase is a modality</strong>—that is, a filter acting on
-structure with defined expressive range and loss.</p>
-<p>Thus, they are <strong>functionally equivalent</strong> in the
-abstract.</p>
-<p>Each modality: - Takes as input an idea ( i ) - Projects it through a
-constrained interface - Returns an expression (if any) and associated
-structural loss</p>
-<p>This means:</p>
+id="theoretical-foundations-ideas-abstraction-and-modal-interfaces">Theoretical
+Foundations: Ideas, Abstraction, and Modal Interfaces</h2>
+<p>Before examining the full scientific cycle, we need a formal language
+for talking about <strong>ideas</strong> and their <strong>modal
+expressions</strong>. We adopt a minimalist foundational ontology:</p>
 <ul>
-<li><strong>Projection into physical reality</strong> is not
-fundamentally different from <strong>projection into
-memory</strong></li>
-<li><strong>Evaluation</strong> is structurally similar to
-<strong>generation</strong>, except that it discards rather than
-builds</li>
-<li><strong>All modalities are recursive</strong>: what they retain
-becomes input for further abstraction</li>
+<li><p><strong>Primitive Idea (<span
+class="math inline"><em>π</em></span>):</strong> We assume there is at
+least one <strong>primitive idea</strong>, denoted <span
+class="math inline"><em>π</em></span>, which serves as the most basic
+building block of thought. You can think of <span
+class="math inline"><em>π</em></span> as an <strong>“ur-idea”</strong>,
+an undefined atomic unit of cognition (analogous to an empty set in set
+theory or a foundational atom in a formal system) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/formal-theory-of-ideas.html#:~:text=match%20at%20L118%20assume%20the,the%20abstraction%20mechanism%20to%20increase">A
+Formal Theory of Ideas via Minimal Binary Abstraction: Structure,
+Uniqueness, and Generative Complexity from a Single Primitive</a>). In
+practice, there may be many primitive ideas (for example, distinct
+sensory primitives like a basic color or sound); we denote the set of
+all primitive ideas as <span class="math inline"><em>P</em></span>. For
+much of our formal development, however, we can simplify to a single
+abstract primitive <span
+class="math inline"><em>π</em> ∈ <em>P</em></span> without loss of
+generality, since multiple primitives can be encoded as abstractions of
+a single one (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/formal-theory-of-ideas.html#:~:text=generative%20basis%20to%20the%20minimum,example%2C%20if%20in%20Version%202">A
+Formal Theory of Ideas via Minimal Binary Abstraction: Structure,
+Uniqueness, and Generative Complexity from a Single Primitive</a>).
+Importantly, <span class="math inline"><em>π</em></span> carries <em>no
+inherent meaning</em> – it is a placeholder from which meaning will be
+constructed by structure.</p></li>
+<li><p><strong>Universe of Ideas (<span
+class="math inline">ℐ</span>):</strong> From primitive <span
+class="math inline"><em>π</em></span> (or primitives in <span
+class="math inline"><em>P</em></span>) we build up a potentially
+infinite set <span class="math inline">ℐ</span> of all <strong>possible
+ideas</strong>. An <strong>idea</strong> <span
+class="math inline"><em>x</em> ∈ ℐ</span> is understood not by any
+intrinsic semantic content but by its <strong>structural
+relationships</strong> to other ideas. In other words, each idea has a
+kind of “construction history” (or abstraction tree) that ultimately
+traces back to primitive elements (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/formal-theory-of-ideas.html#:~:text=What%20is%20the%20structure%20of,a%20unique%20primitive%20via%20abstraction">A
+Formal Theory of Ideas via Minimal Binary Abstraction: Structure,
+Uniqueness, and Generative Complexity from a Single Primitive</a>) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/formal-theory-of-ideas.html#:~:text=Our%20theory%20embodies%20the%20structuralist,is%20entirely%20defined%20by%20how">A
+Formal Theory of Ideas via Minimal Binary Abstraction: Structure,
+Uniqueness, and Generative Complexity from a Single Primitive</a>). Two
+ideas are considered identical <em>if and only if</em> their
+construction histories (their structural form) are identical (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/formal-theory-of-ideas.html#:~:text=with%20formal%20axioms%2C%20definitions%2C%20and,semantically%20meaningless%20combinations%20%E2%80%93%20as">A
+Formal Theory of Ideas via Minimal Binary Abstraction: Structure,
+Uniqueness, and Generative Complexity from a Single Primitive</a>) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/formal-theory-of-ideas.html#:~:text=This%20structuralist%20stance%20solves%20one,In%20linguistics%2C%20the">A
+Formal Theory of Ideas via Minimal Binary Abstraction: Structure,
+Uniqueness, and Generative Complexity from a Single Primitive</a>). This
+is our criterion of <strong>structural identity</strong>. It means, for
+example, that an idea like “electron” in one scientist’s mind could be
+different from “electron” in another’s mind if they were built via
+different conceptual routes – a provocative notion that formalizes why
+experts may <em>conceptualize</em> the “same” thing differently based on
+their training and experiences.</p></li>
+<li><p><strong>Abstraction Operator (<span
+class="math inline"><em>A</em></span>):</strong> To generate complex
+ideas from simpler ones, we employ an <strong>abstraction
+operator</strong> <span class="math inline"><em>A</em></span>. Formally,
+<span class="math inline"><em>A</em></span> can be thought of as an
+operation that takes one or more existing ideas and <strong>composes or
+generalizes</strong> them into a new idea. In the simplest case, <span
+class="math inline"><em>A</em></span> might be a unary operator (taking
+a single idea to a higher-level idea), but in general we allow <span
+class="math inline"><em>A</em></span> to act on a <em>set</em> of ideas:
+<span class="math inline"><em>A</em> : 𝒫(ℐ) → ℐ</span>, where <span
+class="math inline">𝒫(ℐ)</span> denotes the power set of <span
+class="math inline">ℐ</span> (all subsets of ideas). For a collection of
+ideas <span
+class="math inline">{<em>i</em><sub>1</sub>, <em>i</em><sub>2</sub>, …, <em>i</em><sub><em>n</em></sub>} ⊂ ℐ</span>,
+we write <span
+class="math display"><em>j</em> = <em>A</em>({<em>i</em><sub>1</sub>,<em>i</em><sub>2</sub>,…,<em>i</em><sub><em>n</em></sub>})</span>
+to mean <span class="math inline"><em>j</em></span> is a new idea
+abstracted from <span
+class="math inline"><em>i</em><sub>1</sub>, <em>i</em><sub>2</sub>, …, <em>i</em><sub><em>n</em></sub></span>.
+Intuitively, <span class="math inline"><em>A</em></span>
+<strong>forgets</strong> the individuating details of its input ideas
+and retains what is common or structurally salient among them (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=This%20abstraction%20process%20allows%20the,and%20more%20of%20a%20generalized">The
+Interface Theory of Ideas</a>) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=It%20is%20important%20to%20note,In%20formula%3A%20%E2%84%90">The
+Interface Theory of Ideas</a>). In cognitive terms, <span
+class="math inline"><em>A</em></span> might take several specific
+observations and yield a general concept. For example, from many
+observed apple instances, <span class="math inline"><em>A</em></span>
+might produce the idea <em>apple (in general)</em>; from diverse data
+points, a scientist’s mind applies <span
+class="math inline"><em>A</em></span> to extract a law or pattern.</p>
+<p>The abstraction operator can be applied repeatedly and in various
+combinations. Because we view all ideas as ultimately composed of
+primitives, one can imagine building up an <strong>abstraction
+tree</strong> or network: starting from <span
+class="math inline"><em>π</em></span> (or elements of <span
+class="math inline"><em>P</em></span>) at the base, an idea <span
+class="math inline"><em>j</em></span> may be <span
+class="math inline"><em>A</em></span>-constructed from some prior ideas,
+which in turn were <span
+class="math inline"><em>A</em></span>-constructed from others, and so
+on, until you bottom out at primitives. The set <span
+class="math inline">ℐ</span> is thus the <strong>closure</strong> of
+<span class="math inline"><em>P</em></span> under <span
+class="math inline"><em>A</em></span> (and any other operations we later
+introduce) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=similarities%2C%20yielding%20an%20efficient%20summary,one%20or%20more%20primitive%20ideas">The
+Interface Theory of Ideas</a>). Formally: <span
+class="math inline">ℐ = Cl (<em>P</em>∣<em>A</em>)</span>, the smallest
+set containing all primitives that is closed under application of <span
+class="math inline"><em>A</em></span>. Every complex idea <span
+class="math inline"><em>x</em> ∈ ℐ</span> can be traced back through a
+unique sequence of abstractions to one or more primitive ideas (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/formal-theory-of-ideas.html#:~:text=with%20formal%20axioms%2C%20definitions%2C%20and,semantically%20meaningless%20combinations%20%E2%80%93%20as">A
+Formal Theory of Ideas via Minimal Binary Abstraction: Structure,
+Uniqueness, and Generative Complexity from a Single Primitive</a>). This
+guarantees a form of <strong>uniqueness</strong>: each idea has a
+<strong>canonical construction</strong> (no idea can be constructed in
+two distinct ways under our formal rules (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/formal-theory-of-ideas.html#:~:text=,from%20exactly%20one%20prior%20idea">A
+Formal Theory of Ideas via Minimal Binary Abstraction: Structure,
+Uniqueness, and Generative Complexity from a Single Primitive</a>) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/formal-theory-of-ideas.html#:~:text=subsumes%20the%20previous%20versions%20%E2%80%93,that%20it%20uniquely%20determines%20the">A
+Formal Theory of Ideas via Minimal Binary Abstraction: Structure,
+Uniqueness, and Generative Complexity from a Single Primitive</a>)),
+which in turn means we can assign each idea a unique “code” or
+<em>complexity measure</em> based on its construction steps (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/formal-theory-of-ideas.html#:~:text=no%20additional%20identifications%20%28i,to%20be%20confused%20with%20the">A
+Formal Theory of Ideas via Minimal Binary Abstraction: Structure,
+Uniqueness, and Generative Complexity from a Single Primitive</a>). We
+will not digress into the proof here, but conceptually, think of it like
+Gödel numbering in mathematics: you could encode the abstraction history
+of an idea as a unique number or string (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/formal-theory-of-ideas.html#:~:text=on%20the%20number%20of%20abstraction,the%20first%20version%20in%20which">A
+Formal Theory of Ideas via Minimal Binary Abstraction: Structure,
+Uniqueness, and Generative Complexity from a Single Primitive</a>). This
+will be important when we discuss tracking ideas through transformations
+– it ensures we don’t confuse one idea for another, even when modalities
+blur their appearances.</p></li>
+<li><p><strong>Modalities and Interfaces:</strong> While <span
+class="math inline"><em>A</em></span> describes how ideas combine and
+generalize <em>internally</em>, <strong>modal interfaces</strong>
+describe how ideas are <strong>expressed or experienced</strong> in
+various forms. A <em>modality</em> <span
+class="math inline"><em>m</em></span> can be anything like a sensory
+channel (vision, hearing), a representational format (e.g. verbal
+language, mathematics), or a cognitive context (e.g. memory vs immediate
+experience). Each modality <span class="math inline"><em>m</em></span>
+comes equipped with an <strong>expression function</strong> (or
+<strong>projection function</strong>) <span
+class="math inline"><em>E</em><sub><em>m</em></sub></span> that
+<strong>projects an idea into the format of that modality</strong> (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=Formally%2C%20for%20each%20modality%20m%2C,j%20through%20a%20particular%20medium">The
+Interface Theory of Ideas</a>). Formally, we define: <span
+class="math display"><em>E</em><sub><em>m</em></sub> : ℐ → ℰ<sub><em>m</em></sub>,</span>
+where <span class="math inline">ℰ<sub><em>m</em></sub></span> is the set
+of all possible <strong>expressions</strong> or signals in modality
+<span class="math inline"><em>m</em></span>. If <span
+class="math inline"><em>i</em> ∈ ℐ</span> is an idea, then <span
+class="math inline"><em>E</em><sub><em>m</em></sub>(<em>i</em>)</span>
+is the <em>manifestation</em> or <em>projection</em> of that idea in
+modality <span class="math inline"><em>m</em></span>. For example, if
+<span class="math inline"><em>i</em></span> is the idea of a
+mathematical relationship (say, the law of gravitation), <span
+class="math inline"><em>E</em><sub>math</sub>(<em>i</em>)</span> might
+be a specific equation written on paper, whereas <span
+class="math inline"><em>E</em><sub>visual</sub>(<em>i</em>)</span> might
+be a graph or a mental image illustrating that law, and <span
+class="math inline"><em>E</em><sub>verbal</sub>(<em>i</em>)</span> could
+be a spoken description. All these are different <strong>modal
+projections</strong> of the same underlying idea <span
+class="math inline"><em>i</em></span>.</p>
+<p>Crucially, each <span
+class="math inline"><em>E</em><sub><em>m</em></sub></span> is in general
+<strong>many-to-one</strong> or non-injective (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=Critically%2C%20expression%20functions%20are%20many,simplifications%20on%20what%20is%20expressed">The
+Interface Theory of Ideas</a>) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=Mathematically%2C%20we%20can%20say%20that,differences%20between%20certain%20ideas%20when">The
+Interface Theory of Ideas</a>). This means that <strong>modal
+expressions are lossy</strong>: many distinct ideas may cast the
+<em>same</em> shadow on a given interface. In modality <span
+class="math inline"><em>m</em></span>, the ideas <span
+class="math inline"><em>i</em><sub>1</sub></span> and <span
+class="math inline"><em>i</em><sub>2</sub></span> could <strong>collapse
+to an indistinguishable expression</strong>, if <span
+class="math inline"><em>E</em><sub><em>m</em></sub>(<em>i</em><sub>1</sub>) = <em>E</em><sub><em>m</em></sub>(<em>i</em><sub>2</sub>)</span>
+even though <span
+class="math inline"><em>i</em><sub>1</sub> ≠ <em>i</em><sub>2</sub></span>
+as ideas (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=Mathematically%2C%20we%20can%20say%20that,differences%20between%20certain%20ideas%20when">The
+Interface Theory of Ideas</a>). Equivalently, <span
+class="math inline"><em>E</em><sub><em>m</em></sub></span> <em>filters
+out</em> certain differences – it imposes a structure that can’t capture
+all the richness of <span class="math inline">ℐ</span>. We call this
+<strong>structural filtering</strong>, and we will often speak of the
+<strong>structural loss</strong> of modality <span
+class="math inline"><em>m</em></span>. The loss can be thought of as
+information that gets left behind when an idea is squeezed through the
+constraints of a particular medium of expression (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=For%20instance%2C%20our%20visual%20modality,to%20an%20acoustic%20sequence%20that">The
+Interface Theory of Ideas</a>) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=Mathematically%2C%20we%20can%20say%20that,differences%20between%20certain%20ideas%20when">The
+Interface Theory of Ideas</a>). For instance, our visual modality (<span
+class="math inline"><em>m</em> = vision</span>) is sensitive to shapes
+and colors but not to the molecular details of objects (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=For%20instance%2C%20our%20visual%20modality,to%20an%20acoustic%20sequence%20that">The
+Interface Theory of Ideas</a>). Two different molecular configurations
+can look identical (thus map to the same <span
+class="math inline"><em>E</em><sub>vision</sub></span>), meaning the
+vision interface loses the information that could have distinguished
+them. Likewise, a theory might predict two different underlying
+mechanisms that nevertheless produce the same observable outcome; an
+experiment might not be able to tell which mechanism is at work because
+its measurements are too coarse – again a case of different ideas
+mapping to the same modal output.</p>
+<p>Every modality has its own <em>logic</em> of what it preserves and
+what it discards. We may formalize a notion of <strong>loss
+function</strong> for each modality: for example, we can define a
+non-negative loss <span
+class="math inline"><em>Λ</em><sub><em>m</em></sub>(<em>i</em><sub>1</sub>,<em>i</em><sub>2</sub>)</span>
+such that <span
+class="math inline"><em>Λ</em><sub><em>m</em></sub>(<em>i</em><sub>1</sub>,<em>i</em><sub>2</sub>) = 0</span>
+if <span
+class="math inline"><em>E</em><sub><em>m</em></sub>(<em>i</em><sub>1</sub>) = <em>E</em><sub><em>m</em></sub>(<em>i</em><sub>2</sub>)</span>
+(i.e. <span class="math inline"><em>m</em></span> fails to distinguish
+<span class="math inline"><em>i</em><sub>1</sub></span> from <span
+class="math inline"><em>i</em><sub>2</sub></span>) and <span
+class="math inline"><em>Λ</em><sub><em>m</em></sub>(<em>i</em><sub>1</sub>,<em>i</em><sub>2</sub>) &gt; 0</span>
+otherwise. In simpler terms, if a modality conflates two ideas, it has
+lost the distinction between them. Often we are interested in the loss
+between an idea and itself under projection: we might write <span
+class="math inline">ℓ<sub><em>m</em></sub>(<em>i</em>) = <em>I</em>(<em>i</em>) − <em>I</em>(<em>E</em><sub><em>m</em></sub>(<em>i</em>))</span>
+metaphorically, where <span class="math inline"><em>I</em>(⋅)</span> is
+some measure of information content or complexity. This expresses that
+the <em>idea</em> <span class="math inline"><em>i</em></span> lives in a
+higher-dimensional space of structure, and its <em>expression</em> <span
+class="math inline"><em>E</em><sub><em>m</em></sub>(<em>i</em>)</span>
+lives in a lower-dimensional (or otherwise restricted) space <span
+class="math inline">ℰ<sub><em>m</em></sub></span>. We will not need to
+pick a specific numerical measure, but conceptually <span
+class="math inline">ℓ<sub><em>m</em></sub>(<em>i</em>)</span> indicates
+how much of <span class="math inline"><em>i</em></span>’s structure is
+<em>invisible</em> or flattened out to modality <span
+class="math inline"><em>m</em></span>.</p></li>
 </ul>
-<h4 id="consequence">Consequence:</h4>
-<blockquote>
-<p>The line between thinking, testing, remembering, and imagining
-disappears.<br />
-All are just expressions through differently constrained filters.</p>
-</blockquote>
-<hr />
-<h3 id="time-as-modal-path-length"><strong>4.2 Time as Modal Path
-Length</strong></h3>
-<p>Within this framework, <strong>time</strong> does not appear as an
-independent variable. Instead, we model time as <strong>a function of
-depth and recursion across modalities</strong>.</p>
-<p>Let: - ( (i) ) be the number of abstractions required to construct (
-i ) - ( (n) ) be the ( n )-th iteration of the discovery loop</p>
-<p>Then: - A system’s internal perception of time is tied to
-<strong>modal traversal</strong>: how many times it projects, evaluates,
-refines, and recalls - Modal latency, decay, and update rates introduce
-<strong>perceived time differentials</strong> between phases</p>
-<p>Thus:</p>
-<blockquote>
-<p>Time is not fundamental. It is <strong>emergent from recursive modal
-flow</strong>.</p>
-</blockquote>
-<hr />
-<h3 id="consciousness-as-modal-reflexivity"><strong>4.3 Consciousness as
-Modal Reflexivity</strong></h3>
-<p>A system becomes <em>conscious</em> in this framework when:</p>
+<p>With these components – primitive ideas, abstraction <span
+class="math inline"><em>A</em></span>, and modal projection <span
+class="math inline"><em>E</em><sub><em>m</em></sub></span> – we have a
+kind of <strong>language for epistemic interfaces</strong>. We can now
+begin to describe the scientific discovery process in this language,
+treating each phase of inquiry as a particular configuration of <span
+class="math inline"><em>A</em></span> and <span
+class="math inline"><em>E</em><sub><em>m</em></sub></span> operations.
+To foreshadow: observation will correspond to applying an <span
+class="math inline"><em>E</em><sub><em>m</em></sub></span> that goes
+from the world to internal ideas; hypothesis generation will correspond
+to using <span class="math inline"><em>A</em></span> on accumulated
+ideas; prediction will use an <span
+class="math inline"><em>E</em><sub><em>m</em></sub></span> in reverse
+(projecting an idea back into a modality of expected data); evaluation
+will involve comparing expressions (possibly via another specialized
+interface function); and memory will involve storing ideas in a
+resilient form (another modality with its own properties). All these
+will be seen as <strong>instances of the same structural
+template</strong>: <em>take an idea (or ideas), project via some
+mapping, incur some loss, produce a new idea or record</em>. The power
+of science arises not from escaping these losses, but from
+<strong>chaining and cycling the operations</strong> such that the
+losses in one mode can be compensated or checked by insights from
+another, gradually zeroing in on invariant structures that withstand
+modal translation.</p>
+<h2 id="modal-interfaces-in-scientific-discovery">Modal Interfaces in
+Scientific Discovery</h2>
+<p>Let us delineate the key <strong>modal interfaces</strong> involved
+in the scientific discovery loop and define them in our formal terms. We
+identify at least four fundamental interfaces at play:
+<strong>Observation</strong>, <strong>Hypothesis
+(Conceptualization)</strong>, <strong>Experiment/Evaluation</strong>,
+and <strong>Memory</strong>. Each of these can be rigorously described
+as a mapping (or set of mappings) between different domains of
+information, each mapping being <strong>modal</strong> (i.e. having
+specific structural constraints and losses). By viewing them side by
+side, we will see that they are structurally analogous – in essence,
+<em>each is an interface filtering reality in a particular way</em>.
+This justifies treating them as equivalent types of operations in the
+larger recursive system. We discuss each in turn:</p>
 <ol type="1">
-<li>It has access to its own internal memory as a modality</li>
-<li>It can project into that modality</li>
-<li>It can evaluate its own projections</li>
+<li><p><strong>Observational Interface (<span
+class="math inline"><em>E</em><sub><em>O</em></sub></span>):</strong>
+This interface connects the external <strong>world of phenomena</strong>
+to the internal world of ideas via our senses or instruments. Formally,
+we can define a domain <span class="math inline"><em>W</em></span> to
+represent states of the world (or relevant aspects of reality under
+study). The observational modality <span
+class="math inline"><em>O</em></span> has an associated projection <span
+class="math display"><em>E</em><sub><em>O</em></sub> : <em>W</em> → ℐ<sub>obs</sub>,</span>
+where <span class="math inline">ℐ<sub>obs</sub> ⊆ ℐ</span> is the subset
+of ideas that count as <em>observational ideas</em> or
+<em>percepts</em>. In practice, <span
+class="math inline"><em>E</em><sub><em>O</em></sub></span> might be
+broken into multiple sub-modalities (vision, hearing, experimental
+apparatus readings, etc.), but we can abstractly treat it as one
+combined interface from “world to mind.” When a scientist makes an
+observation – e.g. measuring the temperature of a gas, or noting the
+color of a reaction – the function <span
+class="math inline"><em>E</em><sub><em>O</em></sub></span> is at
+work.</p>
+<p><strong>Structure and Loss:</strong> <span
+class="math inline"><em>E</em><sub><em>O</em></sub></span> is inherently
+a <strong>partial and lossy function</strong>. The world <span
+class="math inline"><em>W</em></span> contains an unfathomable richness
+of detail (one might say infinite degrees of freedom at the quantum
+level, for instance), but the observation interface captures only a
+finite, focused slice. Each act of observation is like taking a
+high-dimensional reality and letting it shine through a tiny keyhole:
+only certain aspects pass through. The size and shape of that keyhole
+are determined by our sensory apparatus or instruments. For example, the
+human eye (one component of <span
+class="math inline"><em>E</em><sub><em>O</em></sub></span>) captures a
+two-dimensional projection of the 3D world, sensitive to electromagnetic
+waves in only a narrow band (visible light) – that is a huge structural
+filtering. A thermometer reading gives one number (mean kinetic energy
+of particles mapped to degrees), collapsing the myriad motions of
+molecules into a single scalar. We might formalize a <strong>measurement
+idea</strong> <span
+class="math inline"><em>o</em> = <em>E</em><sub><em>O</em></sub>(<em>w</em>)</span>
+for some world state <span
+class="math inline"><em>w</em> ∈ <em>W</em></span>. Different world
+states could yield the same observation <span
+class="math inline"><em>o</em></span> (many microstates give the same
+temperature reading) – thus <span
+class="math inline"><em>E</em><sub><em>O</em></sub>(<em>w</em>)</span>
+discards the micro-details. In terms of our loss notation, <span
+class="math inline">ℓ<sub><em>O</em></sub>(<em>w</em>)</span> would be
+large in general; <span
+class="math inline"><em>E</em><sub><em>O</em></sub></span> preserves
+just those aspects of reality that are relevant to the question or that
+our modality is designed to detect, and <em>nothing more</em>.</p>
+<p>Despite this loss, the observational interface provides the
+<strong>grounding</strong> for science. It delivers empirical content –
+<strong>facts</strong> – that subsequent interfaces will attempt to
+explain or use. One can say <span
+class="math inline"><em>E</em><sub><em>O</em></sub></span> yields the
+“raw data” (though even raw data is already cooked by the interface). It
+is important to remember that even at this first stage, <em>what we call
+data is an idea in the mind of the observer or the record of an
+instrument, not reality in full</em>. Observation is <strong>the world’s
+idea as rendered to us</strong>.</p></li>
+<li><p><strong>Conceptual/Hypothesis Interface (<span
+class="math inline"><em>A</em><sub><em>H</em></sub></span>):</strong>
+From observations and prior knowledge, scientists generate
+<strong>hypotheses</strong> or conceptual models. This is the interface
+of <strong>conceptual abstraction and combination</strong>, which we can
+identify with our abstraction operator <span
+class="math inline"><em>A</em></span> acting over a set of idea inputs.
+Let’s denote by <span class="math inline"><em>H</em></span> the modality
+of conceptual thought (high-level reasoning, theory-space). While
+conceptual thought is not separate from the mind (indeed all of this is
+in the mind), we treat it as a distinct mode because it operates on
+ideas <em>internally</em> rather than taking direct input from <span
+class="math inline"><em>W</em></span>. The hypothesis-generation step
+can be modeled as an abstraction operator <span
+class="math inline"><em>A</em><sub><em>H</em></sub></span> which might
+take a collection of observational ideas and possibly some memory ideas
+(past knowledge) as input, yielding a new idea: <span
+class="math display"><em>h</em> = <em>A</em><sub><em>H</em></sub>({<em>i</em><sub>1</sub>,<em>i</em><sub>2</sub>,…,<em>i</em><sub><em>k</em></sub>}),</span>
+where each <span
+class="math inline"><em>i</em><sub><em>j</em></sub> ∈ ℐ</span> might
+include recent observations or existing concepts, and <span
+class="math inline"><em>h</em> ∈ ℐ<sub><em>H</em></sub></span> is a new
+<strong>hypothesis idea</strong> in the conceptual modality <span
+class="math inline"><em>H</em></span>. Here <span
+class="math inline">ℐ<sub><em>H</em></sub></span> refers to ideas
+playing the role of theories or models. In many cases, <span
+class="math inline"><em>A</em><sub><em>H</em></sub></span> is a
+<strong>generalizing abstraction</strong>: it searches for a pattern
+that might explain or unify the given pieces of information (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=This%20abstraction%20process%20allows%20the,and%20more%20of%20a%20generalized">The
+Interface Theory of Ideas</a>). For example, from observing that “this
+object falls” and “that object falls,” etc., and recalling knowledge of
+previous falling objects, one might abstract the idea of a force pulling
+things down (a hypothesis of gravity). In practice, hypothesis
+generation also involves creativity, analogy, and sometimes random
+inspiration – those can be seen as different implementations or
+stochastic elements within the operator <span
+class="math inline"><em>A</em><sub><em>H</em></sub></span>, which our
+formalism doesn’t detail but can accommodate by treating some inputs as
+coming from imaginative leaps (ultimately still ideas being
+combined).</p>
+<p><strong>Structure and Loss:</strong> The hypothesis interface <span
+class="math inline"><em>A</em><sub><em>H</em></sub></span> is where
+<strong>induction and abduction</strong> occur, and it introduces its
+own filters. When we abstract, we <strong>lose</strong> specifics to
+gain generality (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=By%20building%20up%20ideas%20through,primitive%20ideas%20and%20the%20abstraction">The
+Interface Theory of Ideas</a>). <span
+class="math inline"><em>A</em><sub><em>H</em></sub></span> might drop
+contextual details that seem irrelevant in order to capture an
+underlying rule. This is a kind of <em>information compression</em>:
+many individual data points become one conceptual idea. The
+<strong>structural loss here is the loss of particularity</strong>. A
+hypothesis that all swans are white deliberately ignores the individual
+distinctiveness of each observed swan and focuses only on the color
+attribute across instances. In so doing, it might also ignore exceptions
+or additional conditions. In formal terms, <span
+class="math inline"><em>h</em> = <em>A</em><sub><em>H</em></sub>({<em>i</em><sub><em>j</em></sub>})</span>
+cannot be reversed without ambiguity: from the hypothesis alone, one
+cannot reconstruct exactly which observations (or how many) led to it.
+Many different sets of observations could lead to the same abstract idea
+<span class="math inline"><em>h</em></span>. Thus, <span
+class="math inline"><em>A</em><sub><em>H</em></sub></span> (like any
+<span class="math inline"><em>A</em></span>) is many-to-one; it
+sacrifices the <em>data-to-idea mapping</em> invertibility. However,
+this loss is useful: it yields <strong>meaningful structure</strong> –
+an educated guess or a rule that can now be tested and applied beyond
+the original cases. Hypothesis ideas often introduce <em>new terms or
+entities</em> (like “gravity” or “gene”) that go beyond direct
+observation; they enrich the idea space <span
+class="math inline">ℐ</span> by adding <em>constructive elements</em>
+not present in any single earlier idea.</p>
+<p>It’s also worth noting that <span
+class="math inline"><em>A</em><sub><em>H</em></sub></span> may operate
+not just on observational inputs but also on <strong>other
+hypotheses</strong>. Scientific theories often build on sub-theories:
+e.g. a grand unifying theory might abstract from several mid-level
+theories. This means the conceptual interface is recursive: ideas about
+ideas are formed (consistent with our earlier discussion of recursion
+and self-reference in idea systems (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=abstract%20idea%20can%20itself%20serve,in%20reflective%20thought%20and%20consciousness">The
+Interface Theory of Ideas</a>) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=Now%2C%20beyond%20abstraction%2C%20consider%20ideas,body%20sensations%2C%20memories%2C%20and%20thoughts">The
+Interface Theory of Ideas</a>)). We might have <span
+class="math inline"><em>A</em><sub><em>H</em></sub>({<em>h</em><sub>1</sub>,<em>h</em><sub>2</sub>}) = <em>H</em><sub>12</sub></span>,
+combining two earlier hypothesis ideas into a broader one. The
+<strong>uniqueness</strong> of structural composition ensures that even
+very complex theoretical structures can, in principle, be unraveled back
+into their originating components, giving a clear lineage of thought for
+those who trace it.</p></li>
+<li><p><strong>Predictive/Experimental Interface (<span
+class="math inline"><em>E</em><sub><em>P</em></sub></span> and <span
+class="math inline"><em>E</em><sub><em>X</em></sub></span>):</strong>
+Once a hypothesis (theory) is in hand, science proceeds to
+<strong>derive predictions and test them</strong>. This involves a
+perhaps subtle point in our formalism: a theory or hypothesis is an
+idea, but to compare it with observations, it must be <strong>projected
+into the modality of observation or experiment</strong>. We can think of
+two linked interfaces here:</p>
+<ul>
+<li>A <strong>predictive projection</strong> <span
+class="math inline"><em>E</em><sub><em>P</em></sub> : ℐ<sub><em>H</em></sub> → ℐ<sub>obs</sub></span>
+that takes a hypothesis idea <span class="math inline"><em>h</em></span>
+and generates an <em>expected observation idea</em> or pattern <span
+class="math inline"><em>p</em> = <em>E</em><sub><em>P</em></sub>(<em>h</em>)</span>.
+In effect, this is using the theory to <strong>simulate</strong> or
+predict what one should observe under given conditions. For example,
+from a hypothesis about gravity, we predict “if I drop a 1 kg stone from
+10m, I will observe it hit the ground in ~1.4 seconds.” The predicted
+outcome (1.4 s free-fall time) is an idea in the observational format (a
+measurable time).</li>
+<li>An <strong>experimental execution</strong> interface <span
+class="math inline"><em>E</em><sub><em>X</em></sub></span> that maps the
+theory into an actual experimental setup or procedure in the world (one
+could consider this a part of <span
+class="math inline"><em>E</em><sub><em>P</em></sub></span>, but it’s
+useful to separate the <em>ideal prediction</em> from the <em>practical
+action</em>). <span
+class="math inline"><em>E</em><sub><em>X</em></sub></span> would involve
+designing an experiment such that, if the world behaves according to
+theory <span class="math inline"><em>h</em></span>, then running this
+experiment in world <span class="math inline"><em>W</em></span> will
+produce a certain observation. In a sense, <span
+class="math inline"><em>E</em><sub><em>X</em></sub></span> is the
+inverse of <span
+class="math inline"><em>E</em><sub><em>O</em></sub></span>: it goes from
+an idea to a deliberate intervention in <span
+class="math inline"><em>W</em></span>. However, for our purposes, we can
+simplify and focus on the prediction vs. observation comparison, so we
+will often merge the notion of experiment into the prediction interface.
+We’ll use <span
+class="math inline"><em>E</em><sub><em>P</em></sub>(<em>h</em>)</span>
+to denote the <em>set of expected observational outcomes</em> that
+theory <span class="math inline"><em>h</em></span> implies (possibly
+under a specific chosen experiment context).</li>
+</ul>
+<p><strong>Structure and Loss:</strong> The predictive interface <span
+class="math inline"><em>E</em><sub><em>P</em></sub></span> is another
+projection with constraints. Even a theory has limits to what it can
+predict – typically it gives us a functional relationship or a general
+qualitative outcome, not a complete description of every aspect of the
+phenomenon. <span
+class="math inline"><em>E</em><sub><em>P</em></sub>(<em>h</em>)</span>
+might only cover the variables of interest that <span
+class="math inline"><em>h</em></span> addresses, ignoring others. For
+instance, a physics theory might predict positions and velocities but
+say nothing about color or sound, effectively filtering out those
+aspects. Moreover, deriving <span
+class="math inline"><em>E</em><sub><em>P</em></sub>(<em>h</em>)</span>
+often requires <strong>approximations or auxiliary assumptions</strong>,
+which introduce further loss or distortion: one might assume “ideal
+conditions” (vacuum, no friction, etc.) to get a clear prediction. These
+idealizations are themselves a structural loss – the predicted idea
+<span class="math inline"><em>p</em></span> is for an ideal scenario,
+whereas any real observation <span class="math inline"><em>o</em></span>
+will have additional noise or factors. We can formalize an idealization
+as a restricted function <span
+class="math inline"><em>E</em><sub><em>P</em></sub>(<em>h</em>;<em>c</em>)</span>
+where <span class="math inline"><em>c</em></span> encodes conditions
+(some possibly untrue in reality), and thus the true predictive power of
+<span class="math inline"><em>h</em></span> in real condition <span
+class="math inline"><em>c</em>’</span> might be <span
+class="math inline"><em>p</em>′ = <em>E</em><sub><em>P</em></sub>(<em>h</em>;<em>c</em>′)</span>
+which could differ from <span
+class="math inline"><em>p</em> = <em>E</em><sub><em>P</em></sub>(<em>h</em>;<em>c</em>)</span>.
+If the scientist neglects this difference, there is an implicit loss of
+fidelity.</p>
+<p>Nonetheless, the predictive interface provides the crucial
+<strong>bridge for testability</strong>. It transforms a hypothesis from
+a floating idea into something that can be directly checked against
+empirical reality via the observational interface. We have now two ideas
+to compare: the <strong>predicted idea</strong> <span
+class="math inline"><em>p</em> = <em>E</em><sub><em>P</em></sub>(<em>h</em>)</span>
+and the <strong>actual observed idea</strong> <span
+class="math inline"><em>o</em> = <em>E</em><sub><em>O</em></sub>(<em>w</em>)</span>
+from performing the experiment on the world. Both <span
+class="math inline"><em>p</em></span> and <span
+class="math inline"><em>o</em></span> live in the same modality
+(observational data space) and thus are comparable.</p></li>
+<li><p><strong>Evaluation/Comparison Interface (<span
+class="math inline"><em>C</em></span>):</strong> Science demands that we
+<strong>close the loop</strong> by comparing what is predicted with what
+is observed. This yields a judgement: did our idea survive the test, or
+must it be modified or discarded? In our framework, this comparison is
+itself an interface – a highly processed and simplified interpretation
+of the relationship between two complex data sets. We define an
+interface (or simply a function) <span
+class="math display"><em>C</em> : ℐ<sub>obs</sub> × ℐ<sub>obs</sub> → ℐ<sub>eval</sub>,</span>
+where <span class="math inline">ℐ<sub>eval</sub></span> might be a small
+set of possible <strong>evaluation outcomes</strong> (e.g. “match”,
+“mismatch”, or perhaps a numerical error measure idea). Given <span
+class="math inline"><em>p</em> = <em>E</em><sub><em>P</em></sub>(<em>h</em>)</span>
+and <span
+class="math inline"><em>o</em> = <em>E</em><sub><em>O</em></sub>(<em>w</em>)</span>,
+the evaluation interface produces <span
+class="math display"><em>e</em> = <em>C</em>(<em>p</em>,<em>o</em>),</span>
+an idea encapsulating the result of the test. For example, <span
+class="math inline"><em>C</em></span> might output a Boolean-like idea
+(pass/fail), or a descriptive idea like “discrepancy in high-frequency
+range”, or a statistical value like a <span
+class="math inline"><em>χ</em><sup>2</sup></span> statistic encoded as
+an idea. In any case, <span class="math inline"><em>e</em></span> is the
+<strong>feedback</strong> that will inform what happens to our
+hypothesis next.</p>
+<p><strong>Structure and Loss:</strong> At first glance, one might not
+think of comparison as “lossy,” but consider that often a rich dataset
+is reduced to a single <strong>p-value</strong>, or a complicated
+pattern difference is summarized as “significant” or “not significant”.
+This is a massive compression of information. The evaluation interface
+<span class="math inline"><em>C</em></span> acts as a filter that
+highlights only the <strong>discrepancies or accords</strong> relevant
+to the hypothesis’s validity. It ignores <em>everything about the data
+except how they differ or agree</em>. In formal terms, <span
+class="math inline"><em>C</em>(<em>p</em>,<em>o</em>)</span> might be as
+simple as <span
+class="math inline"><em>e</em> = (|<em>p</em>−<em>o</em>|&lt;<em>ϵ</em>)</span>
+(an idea representing a truth value of whether the difference is below
+some threshold <span class="math inline"><em>ϵ</em></span>). Much like
+other modalities, different pairs <span
+class="math inline">(<em>p</em>,<em>o</em>)</span> could yield the same
+evaluation <span class="math inline"><em>e</em></span> – many different
+mismatches might all map to “fail”, for instance. Thus, the
+<strong>survival criterion</strong> in science is coarse-grained: we
+typically do not retain all the information about <em>how</em> a theory
+failed at this stage, just the essential verdict. Of course, scientists
+do pay attention to detailed residuals and patterns (which effectively
+means they sometimes use a richer <span
+class="math inline"><em>C</em></span> interface, breaking one comparison
+into many smaller ones), but ultimately the outcome gets distilled into
+an update to our belief in the hypothesis.</p>
+<p>The notion of <strong>survivability</strong> can be introduced here.
+We say an idea (hypothesis) <span class="math inline"><em>h</em></span>
+<em>survives</em> a test if <span
+class="math inline"><em>e</em> = <em>C</em>(<em>E</em><sub><em>P</em></sub>(<em>h</em>),<em>E</em><sub><em>O</em></sub>(<em>w</em>))</span>
+indicates an acceptable match. Over the course of multiple recursive
+cycles, a hypothesis might undergo many tests. We can define a measure
+of survivability <span class="math inline"><em>S</em>(<em>h</em>)</span>
+as the proportion of tests (weighted by importance) in which <span
+class="math inline"><em>h</em></span> passes, or perhaps as the
+conditional probability of <span class="math inline"><em>h</em></span>
+not being falsified given all evidence so far. In evolutionary terms,
+hypotheses are like organisms facing an environment of experiments:
+those that consistently yield <span
+class="math inline"><em>C</em></span> outputs indicating success will
+<em>persist in the scientific record</em>, while those that don’t will
+be <em>selected out</em>. This evolutionary analogy is not coincidental:
+as the Interface Theory of Ideas suggests, our interfaces (including
+cognitive ones) are themselves shaped by natural selection to favor
+useful survivable patterns (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=that%20improve%20survival%20and%20reproduction,cognitive%20tendencies%20will%20leave%20more">The
+Interface Theory of Ideas</a>) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=match%20at%20L781%20idea%20or,because%20they%20lead%20to%20error">The
+Interface Theory of Ideas</a>). In science, we impose an artificial
+selection via rigorous testing, ensuring that only theories that
+<strong>adapt</strong> (by being modified) or are inherently
+<strong>fit</strong> (accurate) remain in play.</p></li>
+<li><p><strong>Memory/Recording Interface (<span
+class="math inline"><em>E</em><sub><em>M</em></sub></span>):</strong>
+The final (though ongoing) interface we note is that of <strong>memory
+and communication</strong>. Scientific discovery is cumulative:
+observations and theories from one iteration must be
+<strong>stored</strong> and made available for future cycles, often by
+recording in notebooks, journals, or in one’s own long-term memory.
+Memory itself can be viewed as a modality <span
+class="math inline"><em>M</em></span> with an encoding function <span
+class="math display"><em>E</em><sub><em>M</em></sub> : ℐ → ℐ<sub><em>M</em></sub>,</span>
+where <span class="math inline">ℐ<sub><em>M</em></sub></span> is the set
+of <strong>memory traces</strong> or stored representations. For a human
+scientist, <span
+class="math inline"><em>E</em><sub><em>M</em></sub></span> might be the
+act of committing something to memory (neural patterns) or writing it
+down (the idea is now encoded in text, which is an idea in a linguistic
+modality, and stored in a library or disk). For our purposes, the key is
+that memory preserves ideas <strong>with some fidelity but also with
+some loss</strong>.</p>
+<p><strong>Structure and Loss:</strong> Memory is imperfect. Human
+memory will forget details or distort them over time; written records
+omit the tacit knowledge or the full context of discovery. Thus <span
+class="math inline"><em>E</em><sub><em>M</em></sub></span> is not a
+trivial identity function. It filters and compresses information for
+storage. One might only record the final results of an experiment and
+not the numerous trials that led to it, for example. Or one might store
+a simplified model and disregard edge cases that were observed. Memory
+also has limited capacity and resolution, much like perception does.
+However, memory’s strength is that it <strong>extends the interface
+across time</strong>: what was once an immediate idea can later
+resurface and be fed as input into a new abstraction (<span
+class="math inline"><em>A</em><sub><em>H</em></sub></span>) along with
+new observations. In formal terms, after memory interface, the next
+cycle’s hypothesis might be <span
+class="math inline"><em>h</em>′ = <em>A</em><sub><em>H</em></sub>({new
+observation <em>i</em><sub>new</sub>,old stored idea
+<em>i</em><sub>old</sub>})</span>. Memory ensures that knowledge
+accumulates rather than each cycle starting from scratch. It effectively
+<strong>couples the cycles of the recursion</strong>, threading them
+into a coherent long-term inquiry.</p>
+<p>We should note that communication to other scientists is another
+aspect of <span
+class="math inline"><em>E</em><sub><em>M</em></sub></span> –
+effectively, publishing a paper is like writing to a <strong>shared
+memory</strong> accessible by all in the community. This allows the
+recursive process to become <strong>distributed across many
+agents</strong> (the community of scientists) and across generations.
+The framework can be expanded to multiple agents, each with their own
+interfaces, communicating their ideas (which is an <span
+class="math inline"><em>E</em><sub><em>M</em></sub></span> from one to
+an input of <span
+class="math inline"><em>A</em><sub><em>H</em></sub></span> for another,
+and so on). For simplicity, we stick to a single inquirer abstraction,
+but the power of science in reality comes from this collective recursion
+with shared memory.</p></li>
 </ol>
-<p>This is a <strong>modally reflexive system</strong>—one that includes
-a full self-loop:</p>
-<p>[ i i’ f i’’ ]</p>
-<p>The result is not awareness in the metaphysical sense, but: -
-Internal structural monitoring - Self-modification - Pattern
-reinforcement or inhibition based on internal coherence</p>
-<h4 id="consequence-1">Consequence:</h4>
-<blockquote>
-<p>A conscious system is not one that knows.<br />
-It is one that <strong>filters itself</strong>.</p>
-</blockquote>
-<hr />
-<h3 id="scientific-objectivity-as-modal-invariance"><strong>4.4
-Scientific Objectivity as Modal Invariance</strong></h3>
-<p>If an idea consistently survives projection across many modalities: -
-Empirical - Simulated - Linguistic - Introspective - Social</p>
-<p>Then we say it has <strong>cross-modal coherence</strong>.</p>
-<p>This becomes the basis for scientific objectivity—not truth, but
-<strong>survivability across expressive filters</strong>.</p>
-<p>Formally, an idea ( i ) is modal-coherent across ( M = {m_1, …, m_k}
-) if:</p>
-<p>[ m_i M,E_{m_i}(i) <em>{m_i},L</em>{m_i}(i) &lt; ]</p>
-<p>Thus:</p>
-<blockquote>
-<p>What we call “truth” is <strong>robust expressibility under multiple
-incompatible constraints</strong>.</p>
-</blockquote>
-<hr />
-<h3 id="self-evolving-discovery-systems"><strong>4.5 Self-Evolving
-Discovery Systems</strong></h3>
-<p>The final consequence is that discovery can now be modeled as a
-<strong>fully recursive agent</strong>:</p>
+<p>These interfaces – Observation (<span
+class="math inline"><em>E</em><sub><em>O</em></sub></span>),
+Hypothesis/Conceptualization (<span
+class="math inline"><em>A</em><sub><em>H</em></sub></span>),
+Prediction/Experiment (<span
+class="math inline"><em>E</em><sub><em>P</em></sub></span>, <span
+class="math inline"><em>E</em><sub><em>X</em></sub></span>), Evaluation
+(<span class="math inline"><em>C</em></span>), and Memory (<span
+class="math inline"><em>E</em><sub><em>M</em></sub></span>) – constitute
+the <strong>modalities of scientific discovery</strong>. Each is an
+<strong>idea-transformer</strong>: taking some content (world or idea)
+and yielding a new representation with certain structure. Crucially,
+each also <strong>discards</strong> something in translation (whether it
+be fine-grained detail, individuality of instances, irrelevant
+variables, or complexity of error distribution). They are thus
+<strong>modal filters</strong>. None of them gives a complete picture
+alone; but together, orchestrated in a cycle, they allow progressively
+refining understanding. Figure 1 (conceptually) would show these
+interfaces as nodes in a loop: <em>World <span
+class="math inline"><em>W</em></span> —(Observation)→ data idea <span
+class="math inline"><em>o</em></span> —(Abstraction)→ theory idea <span
+class="math inline"><em>h</em></span> —(Prediction)→ expected data idea
+<span class="math inline"><em>p</em></span> —(Evaluation)→ result <span
+class="math inline"><em>e</em></span> —(Memory)→ stored knowledge, which
+then influences the next cycle’s observation or abstraction.</em>
+Although we don’t present a literal diagram here, it may help to
+mentally visualize this loop. Next, we formalize the entire recursive
+cycle and discuss how the traversal through these interfaces can be
+iterated and analyzed.</p>
+<h2 id="recursive-cycle-of-discovery-formal-model">Recursive Cycle of
+Discovery: Formal Model</h2>
+<p>Having identified the components, we now integrate them into a
+<strong>unified recursive process</strong>. In each iteration of
+scientific inquiry, the system (a scientist or community) moves through
+the interfaces described above, generating new ideas and updating old
+ones. We can represent one cycle in an abstract form and then consider
+its repetition:</p>
 <ul>
-<li>All cognition is modal projection</li>
-<li>All learning is loss-aware feedback</li>
-<li>All memory is recursive reconstruction</li>
-<li>All generation is pattern reuse</li>
+<li><p><strong>Start:</strong> Assume at the start of cycle <span
+class="math inline"><em>t</em></span> the scientist has some
+<strong>prior state</strong> of knowledge encoded in memory as <span
+class="math inline"><em>M</em><sub><em>t</em> − 1</sub></span> (which
+could include prior theories, background assumptions, and past data).
+The external world is in some state <span
+class="math inline"><em>w</em><sub><em>t</em></sub> ∈ <em>W</em></span>
+relevant to the inquiry (e.g. the specific experiment or observation
+context at time <span class="math inline"><em>t</em></span>).</p></li>
+<li><p><strong>Observation:</strong> The world state passes through the
+observational interface to produce an observational idea: <span
+class="math display"><em>o</em><sub><em>t</em></sub> = <em>E</em><sub><em>O</em></sub>(<em>w</em><sub><em>t</em></sub>).</span>
+This <span class="math inline"><em>o</em><sub><em>t</em></sub></span> is
+now an <strong>empirical idea</strong> available to the scientist. It
+could be a dataset, a sensory perception, a reading – whatever form the
+observation takes.</p></li>
+<li><p><strong>Integration:</strong> The scientist combines this new
+observation with relevant prior ideas (from memory) to form a set of
+inputs for hypothesis generation. Let <span
+class="math inline"><em>I</em><sub><em>t</em></sub></span> denote the
+input idea set for abstraction at cycle <span
+class="math inline"><em>t</em></span>. One reasonable choice is <span
+class="math display"><em>I</em><sub><em>t</em></sub> = { <em>o</em><sub><em>t</em></sub> } ∪ Select (<em>M</em><sub><em>t</em> − 1</sub>),</span>
+where <span
+class="math inline">Select (<em>M</em><sub><em>t</em> − 1</sub>)</span>
+means the scientist selects some subset of stored knowledge that seems
+relevant to current observation (this could include the most recent
+theory or any context). In some cases, <span
+class="math inline"><em>I</em><sub><em>t</em></sub></span> might just be
+<span class="math inline">{<em>o</em><sub><em>t</em></sub>}</span> if
+working inductively from scratch, or largely old ideas if
+re-interpreting data.</p></li>
+<li><p><strong>Hypothesis Formation:</strong> Apply the abstraction
+interface to generate a new hypothesis or update an existing one: <span
+class="math display"><em>h</em><sub><em>t</em></sub> = <em>A</em><sub><em>H</em></sub>(<em>I</em><sub><em>t</em></sub>).</span>
+Here <span class="math inline"><em>h</em><sub><em>t</em></sub></span> is
+the hypothesis idea proposed at iteration <span
+class="math inline"><em>t</em></span>. If the scientist is testing an
+existing theory, <span
+class="math inline"><em>A</em><sub><em>H</em></sub></span> might
+actually just return that existing theory unchanged (i.e. <span
+class="math inline"><em>h</em><sub><em>t</em></sub> = <em>h</em><sub><em>t</em> − 1</sub></span>)
+or a tweaked version thereof; if the scientist is exploring, <span
+class="math inline"><em>A</em><sub><em>H</em></sub></span> might produce
+a brand new conjecture to explain <span
+class="math inline"><em>o</em><sub><em>t</em></sub></span>. In our
+formalism, both cases are covered: <span
+class="math inline"><em>I</em><sub><em>t</em></sub></span> could contain
+a prior hypothesis which, combined with new data, yields an adjusted
+hypothesis. We allow <span
+class="math inline"><em>A</em><sub><em>H</em></sub></span> to produce
+either a brand new idea or to refine an old one – mathematically it’s
+just producing an idea from inputs.</p></li>
+<li><p><strong>Prediction:</strong> The hypothesis <span
+class="math inline"><em>h</em><sub><em>t</em></sub></span> is projected
+into the observational domain to yield a prediction: <span
+class="math display"><em>p</em><sub><em>t</em></sub> = <em>E</em><sub><em>P</em></sub>(<em>h</em><sub><em>t</em></sub>).</span>
+This <span class="math inline"><em>p</em><sub><em>t</em></sub></span>
+represents what the scientist expects to observe given <span
+class="math inline"><em>h</em><sub><em>t</em></sub></span>. In practice,
+<span class="math inline"><em>p</em><sub><em>t</em></sub></span> might
+depend on specifying how the observation is to be made, so more
+explicitly one might have <span
+class="math inline"><em>p</em><sub><em>t</em></sub> = <em>E</em><sub><em>O</em></sub>(<em>E</em><sub><em>X</em></sub>(<em>h</em><sub><em>t</em></sub>))</span>:
+the hypothesis guides an experimental setup <span
+class="math inline"><em>E</em><sub><em>X</em></sub>(<em>h</em><sub><em>t</em></sub>)</span>
+(like “if <span
+class="math inline"><em>h</em><sub><em>t</em></sub></span> is true, do X
+to see Y”), and then <span
+class="math inline"><em>E</em><sub><em>O</em></sub></span> applied to
+the world during that experiment yields an expected <span
+class="math inline"><em>Y</em></span>. But for simplicity, we
+encapsulate this in a single step <span
+class="math inline"><em>E</em><sub><em>P</em></sub></span>.</p></li>
+<li><p><strong>Evaluation:</strong> The predicted outcome <span
+class="math inline"><em>p</em><sub><em>t</em></sub></span> is compared
+with the actual observation <span
+class="math inline"><em>o</em><sub><em>t</em></sub></span> (or with a
+later observation if one separates a confirmation experiment – we can
+also imagine that after forming <span
+class="math inline"><em>h</em><sub><em>t</em></sub></span>, the
+scientist does a new experiment yielding <span
+class="math inline"><em>o</em>′<sub><em>t</em></sub></span>, and
+compares <span
+class="math inline"><em>p</em><sub><em>t</em></sub> = <em>E</em><sub><em>P</em></sub>(<em>h</em><sub><em>t</em></sub>)</span>
+with <span class="math inline"><em>o</em>′<sub><em>t</em></sub></span>.
+The indexing can be adjusted to fit scenarios, but the logic is the
+same). The comparison interface gives: <span
+class="math display"><em>e</em><sub><em>t</em></sub> = <em>C</em>(<em>p</em><sub><em>t</em></sub>,<em>o</em><sub><em>t</em></sub>).</span>
+If <span class="math inline"><em>o</em><sub><em>t</em></sub></span> was
+the original observation that inspired <span
+class="math inline"><em>h</em><sub><em>t</em></sub></span>, often one
+would not compare <span
+class="math inline"><em>h</em><sub><em>t</em></sub></span> against the
+<em>same</em> <span
+class="math inline"><em>o</em><sub><em>t</em></sub></span> (since <span
+class="math inline"><em>h</em><sub><em>t</em></sub></span> was built to
+explain <span class="math inline"><em>o</em><sub><em>t</em></sub></span>
+in the first place – it will trivially fit). More typically, <span
+class="math inline"><em>o</em><sub><em>t</em></sub></span> is split into
+two parts (one for forming <span
+class="math inline"><em>h</em><sub><em>t</em></sub></span> and one for
+testing it) or an entirely new <span
+class="math inline"><em>o</em><sub><em>t</em> + 1</sub></span> is
+acquired to test <span
+class="math inline"><em>h</em><sub><em>t</em></sub></span>. Our notation
+can accommodate this by shifting indices, but to avoid confusion, think
+of <span class="math inline"><em>o</em><sub><em>t</em></sub></span> here
+as <em>new data used to test <span
+class="math inline"><em>h</em><sub><em>t</em></sub></span></em>. The
+outcome <span class="math inline"><em>e</em><sub><em>t</em></sub></span>
+might be binary (“consistent” or “not consistent”) or a graded error. In
+any case, it is an idea summarizing the success of <span
+class="math inline"><em>h</em><sub><em>t</em></sub></span> under
+scrutiny.</p></li>
+<li><p><strong>Memory Update:</strong> The cycle concludes by updating
+the memory state: <span
+class="math display"><em>M</em><sub><em>t</em></sub> = Update(<em>M</em><sub><em>t</em> − 1</sub>, <em>o</em><sub><em>t</em></sub>, <em>h</em><sub><em>t</em></sub>, <em>e</em><sub><em>t</em></sub>).</span>
+In words, the memory now incorporates the new observation, the
+hypothesis, and the evaluation result. The precise update rule can vary:
+one may add <span
+class="math inline"><em>h</em><sub><em>t</em></sub></span> to the set of
+accepted theories if <span
+class="math inline"><em>e</em><sub><em>t</em></sub></span> was
+favorable, or mark it as refuted if <span
+class="math inline"><em>e</em><sub><em>t</em></sub></span> was
+unfavorable, etc. One may store <span
+class="math inline"><em>o</em><sub><em>t</em></sub></span> in a database
+of facts. One may discard or keep previous ideas depending on <span
+class="math inline"><em>e</em><sub><em>t</em></sub></span>. The
+<strong>algorithm of science</strong> (if we think in AI terms) would
+use <span class="math inline"><em>e</em><sub><em>t</em></sub></span> as
+a loss to adjust <span
+class="math inline"><em>h</em><sub><em>t</em></sub></span> or to
+generate a new hypothesis in the next cycle (<span
+class="math inline"><em>t</em> + 1</span>). For example, if <span
+class="math inline"><em>e</em><sub><em>t</em></sub></span> indicates a
+large error, in the next cycle the abstraction operator <span
+class="math inline"><em>A</em><sub><em>H</em></sub></span> might be
+invoked with a different strategy or additional inputs to try a new
+hypothesis.</p></li>
 </ul>
-<p>Such a system can: - Propose ideas - Test them internally or
-externally - Refine based on feedback - Reinforce successful structures
-- Discard fragile or non-expressive abstractions</p>
-<p>This leads naturally to an <strong>adaptive, evolving conceptual
-agent</strong> whose “intelligence” is measured not by accuracy, but
-by:</p>
+<p>This completes one loop of the process. What makes it
+<em>recursive</em> is that we then <strong>feed back into the next
+iteration</strong>: <span
+class="math inline"><em>M</em><sub><em>t</em></sub></span> carries
+information forward, and a new cycle <span
+class="math inline"><em>t</em> + 1</span> starts possibly with a new
+observation <span
+class="math inline"><em>o</em><sub><em>t</em> + 1</sub></span>, leading
+to <span class="math inline"><em>h</em><sub><em>t</em> + 1</sub></span>,
+etc. The term <strong>recursive</strong> here also has a deeper meaning:
+not only is the process iterative, but ideas from previous cycles can
+become <em>objects of consideration in subsequent cycles</em>. For
+instance, a theory <span
+class="math inline"><em>h</em><sub><em>t</em></sub></span> developed
+early on can later itself become the subject of study – scientists can
+form <em>meta-hypotheses</em> about why certain theories work, or
+incorporate one theory into another. In a formal sense, the space <span
+class="math inline">ℐ</span> of ideas is being continually expanded and
+remolded by the very process that uses it. There is a self-referential
+flavor: science uses ideas (theories) to improve ideas (theories about
+theories, better methods, etc.). This is analogous to the recursion and
+self-reference discussed in the Interface Theory of Ideas, where an
+interface can generate ideas about its own operation (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=Now%2C%20beyond%20abstraction%2C%20consider%20ideas,body%20sensations%2C%20memories%2C%20and%20thoughts">The
+Interface Theory of Ideas</a>) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=Self,Each%20act%20of">The
+Interface Theory of Ideas</a>). Here, the scientific method can itself
+become an object of scientific study (e.g., psychology of science,
+methodology research), which is the process taking itself as input.</p>
+<p>Let’s illustrate the cycle with a <strong>concrete metaphor</strong>
+to ground this formalism: Imagine a sculptor (the scientist) trying to
+carve a statue (accurate knowledge) out of a block of marble (the
+unknown reality). The sculptor’s chisel blows are like observations
+(<span class="math inline"><em>E</em><sub><em>O</em></sub></span>
+interacting with <span class="math inline"><em>W</em></span>) – each
+strike reveals something (a piece falls away) but also is guided by an
+idea of the form to achieve. The sculptor steps back to
+<strong>conceptualize</strong> the shape emerging (<span
+class="math inline"><em>A</em><sub><em>H</em></sub></span> on what’s
+seen and remembered of the intended shape). They then
+<strong>predict</strong> how the next strike will shape it (<span
+class="math inline"><em>E</em><sub><em>P</em></sub></span> simulating
+outcome) and then strike and see the result, <strong>evaluating</strong>
+whether it matches the intention (<span
+class="math inline"><em>C</em></span> comparing intended vs actual
+form). Over many iterations, the statue starts to resemble the
+envisioned form more and more. However, crucially, the sculptor can
+never put marble back, only remove – analogous to how each observation
+removes possibilities and adds knowledge but we can’t recover what was
+not observed. The hope is that by iterative refinement, the final statue
+corresponds to the true form hidden in the marble (reality’s structure).
+In our interface terms, each cycle should ideally improve the alignment
+between the theory idea and the world’s actual patterns.</p>
+<p>From a <strong>system perspective</strong>, one can view the
+scientific enterprise as a <strong>dynamical system</strong> in the
+space of ideas: <span
+class="math inline"><em>M</em><sub><em>t</em></sub> = <em>F</em>(<em>M</em><sub><em>t</em> − 1</sub>,<em>w</em><sub><em>t</em></sub>)</span>
+where <span class="math inline"><em>F</em></span> encapsulates the
+operations above. This system seeks fixed points or attractors – a state
+where the hypothesis no longer drastically changes cycle to cycle
+because it consistently predicts observations well (thus <span
+class="math inline"><em>e</em><sub><em>t</em></sub></span> is
+continually “good”). Such an attractor would correspond to what we
+consider a well-established <em>theory or law of nature</em>. In our
+terms, that is an idea <span
+class="math inline"><em>h</em><sup>*</sup></span> that has high
+survivability <span
+class="math inline"><em>S</em>(<em>h</em><sup>*</sup>)</span> across
+many contexts and perhaps even becomes part of memory <span
+class="math inline"><em>M</em></span> as a trusted background element
+for future abstractions. However, unlike a static fixed point, science
+can always be perturbed by new observations or by reaching new domains
+where the current interface fails. Then the process continues (as Kuhn
+would say, normal science continues until a crisis causes a paradigm
+shift – in our model, that’s just a bigger update when <span
+class="math inline"><em>e</em><sub><em>t</em></sub></span> starts
+consistently signaling failure under new conditions).</p>
+<p>It is also instructive to consider the <strong>limits of this
+recursion</strong>. The Interface Theory of Ideas talks about the
+<em>limit space of ideas</em> as an open horizon (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=modality,itself%20is%20interpreted%20as%20an">The
+Interface Theory of Ideas</a>) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=experience,cognitive%20makeups">The
+Interface Theory of Ideas</a>). In science, one can imagine an infinite
+sequence of refining theories <span
+class="math inline"><em>h</em><sub>1</sub>, <em>h</em><sub>2</sub>, <em>h</em><sub>3</sub>, …</span>
+approaching some ideal complete theory <span
+class="math inline"><em>h</em><sub>∞</sub></span> in the limit. Whether
+such a limit exists or is reachable is a matter of philosophical
+speculation. It could be that reality’s richness is inexhaustible, so
+the sequence never converges but just yields progressively better
+approximations. Alternatively, perhaps there is a final theory of
+everything (a true fixed point). Our framework does not assume either
+way; it only provides the mechanism for movement. What it does suggest
+is that <strong>each theory is an interface state</strong>, and a final
+truth would be like a hypothetical interface that no longer loses
+information – an ultimate perspective where prediction and observation
+match perfectly because we have the full structural mapping. Whether the
+human scientific method can reach that, or whether infinite new
+modalities would be needed (as some think new physics always opens new
+questions), remains open. We lean on the side of humility: historically,
+every time it seemed we had nature figured out, new anomalies
+(ultraviolet catastrophe, relativity, quantum phenomena, etc.) forced
+expansions of our interface.</p>
+<p>Thus, the recursion likely continues indefinitely, or at least as
+long as curiosity and reality’s depth persist. In the next section, we
+delve deeper into the nature of <strong>structural loss and
+compensation</strong> in this process, examining how the chain of
+interfaces manages to yield robust knowledge despite each link being
+imperfect. We also explore how <em>equating all these stages as
+fundamentally similar operations</em> helps dissolve certain
+philosophical dichotomies – such as the divide between empirical and
+theoretical or between observer and model – into a more integrated
+view.</p>
+<h2
+id="structural-loss-compensation-and-the-equivalence-of-interfaces">Structural
+Loss, Compensation, and the Equivalence of Interfaces</h2>
+<p>A striking aspect of modeling discovery as we have is recognizing
+that <strong>every phase – looking, thinking, testing, remembering – is
+subject to structural loss</strong>. No part of the process gives us a
+full, unmediated grasp of reality. And yet, the miracle of science is
+that through <em>coordination</em> of these lossy steps, something like
+an accurate picture emerges over time. How can that be? To answer this,
+we consider how losses in one interface can be mitigated by insights
+from another, and how understanding the <strong>equivalence of these
+interfaces</strong> allows scientists to cleverly navigate
+limitations.</p>
+<p>First, let’s emphasize the universality of loss:</p>
 <ul>
-<li><strong>Generative generalizability</strong></li>
-<li><strong>Cross-modal coherence</strong></li>
-<li><strong>Low-loss retention and recall</strong></li>
-<li><strong>Self-reconstruction across time</strong></li>
+<li><p><strong>Observation’s loss:</strong> We only perceive certain
+aspects (e.g. visible light, macro-scale features). We miss the rest
+(e.g. other radiation, microscopic detail) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=For%20instance%2C%20our%20visual%20modality,to%20an%20acoustic%20sequence%20that">The
+Interface Theory of Ideas</a>). This not only limits what data we have,
+but can mislead – for centuries, humans thought no other light existed
+beyond the visible spectrum; it took extending our interface (infrared,
+ultraviolet detection) to reveal more.</p></li>
+<li><p><strong>Conceptual loss:</strong> Our theories simplify; they
+assume ceteris paribus (all else equal), ideal conditions, or focus on a
+subset of variables. They also are limited by our conceptual vocabulary
+– one cannot formulate an idea one doesn’t have building blocks for.
+Before the concept of “germ” existed, one couldn’t hypothesize germ
+theory of disease; the abstraction operators available were not yet rich
+enough, partly due to lack of observations (microbes unseen) and partly
+due to entrenched alternative abstractions (“miasma”). Thus, at any
+point, <span class="math inline"><em>A</em><sub><em>H</em></sub></span>
+works with what it has and may ignore phenomena it doesn’t know how to
+integrate.</p></li>
+<li><p><strong>Prediction/Experiment loss:</strong> Experiments often
+have <strong>error bars</strong> and <strong>noise</strong>. <span
+class="math inline"><em>E</em><sub><em>P</em></sub></span> might predict
+an ideal value, but <span
+class="math inline"><em>E</em><sub><em>O</em></sub></span> returns <span
+class="math inline"><em>o</em></span> that fluctuates. The comparison
+might categorize as “match” even if there’s some discrepancy, treating
+it as noise. That means fine details of where theory and reality differ
+can be overlooked until instruments improve. Additionally, experiments
+can only isolate so much – e.g. you can’t simultaneously measure a
+particle’s position and momentum with arbitrary precision (Heisenberg’s
+uncertainty, a fundamental limit of one type of observational
+interface). So <span
+class="math inline"><em>E</em><sub><em>X</em></sub></span> plus <span
+class="math inline"><em>E</em><sub><em>O</em></sub></span> inevitably
+has a resolution limit.</p></li>
+<li><p><strong>Memory loss:</strong> As discussed, memory might forget
+anomalies or discard outliers. In fact, scientists sometimes
+intentionally simplify history: when teaching or codifying knowledge,
+they present an idealized narrative. Over time, this can lead to
+<em>confirmation bias</em> if not careful, where only supporting data is
+remembered. Good practice counters this with meta-level interfaces (like
+peer review, or meta-analyses) that try to catch such biases.</p></li>
 </ul>
-<hr />
-<h2 id="philosophical-and-epistemic-implications"><strong>5.
-Philosophical and Epistemic Implications</strong></h2>
-<p>The recursive modal framework does not merely reframe scientific
-discovery—it challenges and extends core assumptions in epistemology,
-metaphysics, and the philosophy of science. This section explores how
-the theory reshapes our understanding of knowledge, meaning,
-objectivity, and the nature of reality.</p>
-<hr />
-<h3 id="knowledge-as-survivable-structure"><strong>5.1 Knowledge as
-Survivable Structure</strong></h3>
-<p>Traditional epistemology distinguishes between justified belief and
-truth. In our framework, knowledge becomes:</p>
-<blockquote>
-<p><strong>An idea that repeatedly survives loss-aware projection across
-modalities and time.</strong></p>
-</blockquote>
-<p>That is: - It can be expressed - It can be retained - It can be
-reused - It remains coherent under refinement</p>
-<p>This is a shift from <strong>truth-conditional</strong> models to
-<strong>filter-resistant structure</strong>.</p>
-<h4 id="consequence-2">Consequence:</h4>
-<blockquote>
-<p>Knowledge is not what is <em>true</em>, but what is <strong>stable
-under projection</strong>.</p>
-</blockquote>
-<p>This makes epistemology operational, recursive, and dynamic.</p>
-<hr />
-<h3 id="meaning-without-semantics"><strong>5.2 Meaning Without
-Semantics</strong></h3>
-<p>The Interface Theory does not assign semantic content to ideas.
-Instead, <strong>meaning emerges from structure</strong>:</p>
+<p>Given all these losses, it’s remarkable science works at all. The key
+is <strong>redundancy and cross-checking</strong>. Each interface leaves
+blind spots, but the <strong>recursive cycling</strong> means those
+blind spots can be illuminated by another pass. For example, observation
+might miss X, but a theory might predict X’s effects indirectly,
+prompting a new kind of observation that reveals X. A famous instance is
+the prediction of Neptune: irregularities in Uranus’s orbit
+(observational discrepancy) were used by Urbain Le Verrier as input
+(<span class="math inline"><em>I</em><sub><em>t</em></sub></span>) to
+abstract a hypothesis of another planet (<span
+class="math inline"><em>h</em><sub><em>t</em></sub></span>). That
+hypothesis predicted a certain location in the sky (<span
+class="math inline"><em>p</em><sub><em>t</em></sub></span>), which when
+observed (<span
+class="math inline"><em>o</em><sub><em>t</em> + 1</sub></span>) led to
+discovery of Neptune. Here the <em>loss</em> in one observation
+(couldn’t see Neptune initially) was compensated by a <em>theory</em>
+that said “something unseen must be there,” which then led to an
+augmented observation (point a better telescope at a predicted spot). In
+terms of our framework, the interfaces were used in tandem: the
+evaluation <span class="math inline"><em>e</em></span> signaled a
+problem, the hypothesis interface conjectured a new idea to fill the
+gap, the observation interface was extended (with a more powerful
+telescope, essentially expanding <span
+class="math inline"><em>E</em><sub><em>O</em></sub></span>’s
+capabilities), and the thing initially lost became found. This
+highlights how interfaces can be <strong>augmented or expanded</strong>
+when needed: we build new instruments (new <span
+class="math inline"><em>E</em><sub><em>O</em></sub></span> modes),
+invent new theoretical constructs (new uses of <span
+class="math inline"><em>A</em><sub><em>H</em></sub></span>), etc.,
+effectively enlarging <span class="math inline">ℐ</span> and refining
+<span class="math inline"><em>E</em><sub><em>m</em></sub></span>.</p>
+<p>Thus, while each step is fallible, the scientific method’s recursion
+is a <em>self-correcting</em> architecture. It doesn’t guarantee
+immediate truth, but it provides a mechanism to detect its own failings:
+when structural loss leads us astray, eventually a mismatch <span
+class="math inline"><em>e</em><sub><em>t</em></sub></span> appears that
+cannot be ignored, prompting adjustments. This aligns with Karl Popper’s
+notion of falsification: theories are not confirmed so much as surviving
+attempts to falsify. In our terms, a theory with high survivability
+<span class="math inline"><em>S</em>(<em>h</em>)</span> has been
+subjected to many <span
+class="math inline"><em>C</em>(<em>E</em><sub><em>P</em></sub>(<em>h</em>),<em>E</em><sub><em>O</em></sub>(<em>w</em>))</span>
+and yielded neutral or positive outcomes <span
+class="math inline"><em>e</em></span> each time. It’s like a ship that’s
+taken many voyages and no storm (experiment) has sunk it yet – we grow
+confident it’s seaworthy, but a stronger storm could still come.</p>
+<p>Now, an important philosophical implication of our model is the
+<strong>blurring of distinctions</strong> between traditionally separate
+categories:</p>
 <ul>
-<li>An idea <em>means something</em> to a modality if its projection is
-non-null and low-loss</li>
-<li>Two ideas are <em>meaningfully related</em> if they survive
-transformation across the same modalities</li>
-<li>An idea <em>gains meaning</em> by being connected to other
-structures that survive projection</li>
+<li><p><strong>Empirical vs Theoretical:</strong> In classical
+philosophy of science, observation is “empirical” and hypothesis is
+“theoretical,” often seen as fundamentally different kinds of knowledge.
+In our interface view, both are just <em>ideas in different
+modalities</em>. Observation <span
+class="math inline"><em>o</em><sub><em>t</em></sub></span> is an idea
+shaped by the sensorimotor modality; a theory <span
+class="math inline"><em>h</em><sub><em>t</em></sub></span> is an idea
+shaped by conceptual modality. Both have structure, both are prone to
+error, both are partial. Indeed, it has long been argued that
+observation is <em>theory-laden</em> – our expectations and concepts
+influence what we observe (we notice certain things and not others). Our
+model explains this naturally: because observation <span
+class="math inline"><em>o</em><sub><em>t</em></sub></span> never comes
+in isolation; it is usually taken <em>in context</em> <span
+class="math inline"><em>I</em><sub><em>t</em></sub></span> that includes
+memory (past knowledge). Thus <span
+class="math inline"><em>A</em><sub><em>H</em></sub></span> (though here
+acting to interpret data rather than to hypothesize anew) can be at work
+in how raw <span
+class="math inline"><em>E</em><sub><em>O</em></sub>(<em>w</em>)</span>
+is framed. In practice, a raw sensor signal often becomes a meaningful
+data point only when combined with a theory (“reading 0.7 on this meter
+means low battery”). So the boundary between observation and inference
+is porous. By treating them within one formal system, we avoid a false
+dichotomy – they are continuous in the space of idea-generating
+operations.</p></li>
+<li><p><strong>Subjective vs Objective:</strong> One might ask, if
+everything is an interface, is anything “objective”? Traditionally,
+observations are seen as objective (given the same setup, any observer
+would see the same) whereas theories might be considered more subjective
+or at least creative. But in interface terms, objectivity can be
+redefined as <strong>intersubjective consistency across
+interfaces</strong>. For example, if multiple independent observers
+(distinct instantiations of <span
+class="math inline"><em>E</em><sub><em>O</em></sub></span> perhaps, or
+multiple scientists with separate cycles) all arrive at the same
+observational idea <span
+class="math inline"><em>o</em><sub><em>t</em></sub></span>, that idea
+gains objectivity. It means despite different personal interfaces, the
+projection converged to the same result – suggesting it’s an invariant
+of the underlying reality. We can formalize this: an idea <span
+class="math inline"><em>i</em></span> is <em>objective</em> to the
+extent that <span
+class="math inline"><em>E</em><sub><em>O</em></sub><sup>(<em>a</em>)</sup>(<em>w</em>) = <em>E</em><sub><em>O</em></sub><sup>(<em>b</em>)</sup>(<em>w</em>) = <em>i</em></span>
+for different observers <span
+class="math inline"><em>a</em>, <em>b</em></span> and relevant world
+state <span class="math inline"><em>w</em></span>. Similarly, a
+hypothesis is objective (or rather, a scientific fact) once it is shared
+and yields consistent <span class="math inline"><em>C</em></span>
+outcomes across different attempts to falsify. Our architecture shows
+how this sharing happens: through the memory/communication interface and
+repeated cycles, a consensus builds. The concept of <strong>modal
+invariants</strong> is key – if an idea persists through different modal
+transformations (e.g., a theoretical relation holds true in different
+experimental setups, and different observers record the same pattern),
+it is regarded as real. In group theory terms, objectivity is invariance
+under change of interface.</p></li>
+<li><p><strong>Reality and the Interface:</strong> Ultimately, our model
+maintains a distinction between <span
+class="math inline"><em>W</em></span> (the world) and <span
+class="math inline">ℐ</span> (ideas), but it heavily emphasizes that
+whatever we know of <span class="math inline"><em>W</em></span> comes
+<em>through</em> <span class="math inline">ℐ</span>. We do not directly
+operate on <span class="math inline"><em>W</em></span>; we operate on
+ideas. Even our interventions <span
+class="math inline"><em>E</em><sub><em>X</em></sub></span> (experiments)
+and observations <span
+class="math inline"><em>E</em><sub><em>O</em></sub></span> are mediated.
+This resonates with Kantian philosophy: we never know the
+“thing-in-itself” (noumenon) directly, only the phenomenon shaped by our
+faculties (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=Philosophically%2C%20the%20Interface%20Theory%20of,shaped%20by%20a%20specific%20context">The
+Interface Theory of Ideas</a>). However, our approach doesn’t retreat to
+solipsism or say reality is arbitrary. On the contrary, the iterative
+success of science implies <span class="math inline"><em>W</em></span>
+has a <strong>consistent structure</strong> that underlies these
+experiences (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=all%20is%20arbitrary,aspects%20of%20reality%20that%20were">The
+Interface Theory of Ideas</a>). The fact that we can converge on
+theories that predict new observations means there <em>is</em> something
+non-arbitrary out there. We just frame the acquisition of knowledge of
+that something as a continuous negotiation between different
+idea-modals.</p></li>
 </ul>
-<h4 id="consequence-3">Consequence:</h4>
-<blockquote>
-<p>Meaning is not inherent in symbols.<br />
-It is <strong>a relational property of cross-modal
-survivability</strong>.</p>
-</blockquote>
-<p>This aligns with embodied cognition, inferentialism, and functional
-semantics.</p>
-<hr />
-<h3 id="reality-as-a-filter-not-a-ground"><strong>5.3 Reality as a
-Filter, Not a Ground</strong></h3>
-<p>The most radical shift is perhaps ontological. In our system:</p>
-<blockquote>
-<p>Reality is not a source of truth—it is <strong>a
-modality</strong>.</p>
-</blockquote>
-<p>That is, physical reality is simply one of many projection filters.
-It constrains ideas just as memory does, just as simulation does.</p>
+<p>In summary, by <strong>viewing observation, hypothesis, evaluation,
+and memory as equivalent modal interfaces</strong>, we unify the
+epistemic agents of science. They are all doing the same fundamental
+thing: <strong>projecting and abstracting ideas with
+constraints</strong>. This helps explain why improvements in one realm
+(say technology for observation) can have analogous effects as
+improvements in another (say mathematical tools for theory) – both
+effectively expand the interface (increase the fidelity or bandwidth of
+one of the <span
+class="math inline"><em>E</em><sub><em>m</em></sub></span> or add new
+primitives and operators to <span
+class="math inline"><em>A</em><sub><em>H</em></sub></span>), and thereby
+allow discovery of patterns previously lost in translation (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=In%20adopting%20this%20attitude%2C%20we,new%20%E2%80%9Cphenomenal%20worlds%E2%80%9D%20accessible%20to">The
+Interface Theory of Ideas</a>). It also demystifies the process: there
+is no magical gap where a wild hypothesis comes from nowhere or a brute
+fact stands completely independent; each arises from prior interfaces
+and feeds into subsequent ones. In a sense, this is a very
+<strong>structuralist</strong> view of knowledge: each piece (fact or
+theory) gets meaning from how it is produced and used in the structure
+of inquiry, not from a standalone correspondence with reality (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/formal-theory-of-ideas.html#:~:text=Our%20theory%20embodies%20the%20structuralist,is%20entirely%20defined%20by%20how">A
+Formal Theory of Ideas via Minimal Binary Abstraction: Structure,
+Uniqueness, and Generative Complexity from a Single Primitive</a>) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/formal-theory-of-ideas.html#:~:text=if%20meaning%20is%20not%20intrinsic%2C,general%20concept%20abstracted%20from%20a">A
+Formal Theory of Ideas via Minimal Binary Abstraction: Structure,
+Uniqueness, and Generative Complexity from a Single Primitive</a>).</p>
+<h2 id="implications-for-knowledge-meaning-and-reality">Implications for
+Knowledge, Meaning, and Reality</h2>
+<p>Reimagining scientific discovery as a recursive modal projection
+system carries profound implications for how we interpret
+<strong>knowledge</strong>, <strong>meaning</strong>, and
+<strong>reality</strong> itself:</p>
 <ul>
-<li>It permits only certain ideas to survive</li>
-<li>It returns structure, but not completeness</li>
-<li>It does not explain—it <strong>selects</strong></li>
+<li><p><strong>Knowledge as Interface Artefact:</strong> Knowledge
+(scientific or otherwise) emerges in our model not as a passive
+reflection of reality, but as an <strong>active, constructed interface
+artifact</strong>. It is the end result of many transductions: reality →
+perception, perception → concept, concept → prediction, etc. This means
+all knowledge is <em>knowledge-for-us</em>, tailored to the modalities
+we used. Just as a computer’s GUI icon for a file is not the file itself
+but a convenient placeholder hiding binary complexity, a scientific
+concept like “atom” is an icon hiding quantum fields and who-knows-what
+underlying it. It’s <em>useful</em> and even <em>rigorously defined</em>
+within a framework, but it’s still an interface simplification.
+<strong>Epistemic humility</strong> is therefore a key implication (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=to%20our%20experiences%20%E2%80%93%20indeed%2C,that%20were%20invisible%20to%20us">The
+Interface Theory of Ideas</a>) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=human%20,that%20were%20invisible%20to%20us">The
+Interface Theory of Ideas</a>): we should always be aware that what we
+“know” could be upended by encountering a new modality or an anomaly
+that our current interface cannot handle. However, this does not lead to
+despair or radical relativism (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=One%20might%20worry%20that%20this,its%20limitations%20and%20to%20the">The
+Interface Theory of Ideas</a>). It’s more akin to being a skilled
+map-maker who knows the map is not the terrain but trusts the map enough
+to navigate, while always being ready to redraw parts if new lands are
+discovered. Ourframework supports the idea that <strong>empirical
+knowledge is reliable</strong> to the extent that it has been
+cross-verified through many modal projections (making it robust), yet it
+is <strong>provisional</strong> because a new kind of observation or
+analysis could reveal gaps.</p></li>
+<li><p><strong>Meaning through Structure:</strong> In this view,
+<strong>meaning</strong> is not a static correspondence between idea and
+object (as a naive realist might hold). Instead, meaning is something
+that <strong>arises from the structural relations among ideas</strong>,
+including the relations established through the discovery cycle. A
+scientific concept means what it does because of how it was arrived at
+and how it is used to generate predictions and explanations (its role in
+the interface graph) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/formal-theory-of-ideas.html#:~:text=if%20meaning%20is%20not%20intrinsic%2C,general%20concept%20abstracted%20from%20a">A
+Formal Theory of Ideas via Minimal Binary Abstraction: Structure,
+Uniqueness, and Generative Complexity from a Single Primitive</a>) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/formal-theory-of-ideas.html#:~:text=something%20partly%20because%20it%20contrasts,The%20value">A
+Formal Theory of Ideas via Minimal Binary Abstraction: Structure,
+Uniqueness, and Generative Complexity from a Single Primitive</a>). For
+instance, the concept of “energy” in physics is meaningful due to its
+conservation properties, its role in countless formulas, its measurable
+effects – all of which are nodes and links in the network of operations
+scientists perform. If one tried to define “energy” in isolation, one
+would get nowhere – it’s defined by an equation (<span
+class="math inline"><em>E</em> = <em>m</em><em>c</em><sup>2</sup></span>
+or <span class="math inline"><em>E</em> = constant in closed
+system</span> etc.), by contrast with other concepts (kinetic vs
+potential), by how we measure it (calorimeters, etc.). Our formal
+approach, which encodes each idea by its unique construction path,
+reinforces this: an idea’s identity (and thereby its meaning) is given
+by <strong>its place in the structure of ideas</strong> (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/formal-theory-of-ideas.html#:~:text=Our%20theory%20embodies%20the%20structuralist,is%20entirely%20defined%20by%20how">A
+Formal Theory of Ideas via Minimal Binary Abstraction: Structure,
+Uniqueness, and Generative Complexity from a Single Primitive</a>). Two
+ideas that play the same structural role are effectively the same idea
+in usage. This structuralist notion of meaning implies that as our
+interface grows, meanings can shift. When a new discovery adds a twist
+(e.g., “planet” meant one thing until we found exoplanets and dwarf
+planets, forcing a structural reclassification), the concept’s meaning
+evolves with the theory network. Thus, scientific terms are not
+eternally fixed – they adapt with the web of ideas. This aligns with
+Thomas Kuhn’s point that after a paradigm shift, even the same terms in
+science may refer to subtly different concepts because the whole
+structure changed. Our model provides a formal underpinning: the term
+might be the same label, but the idea behind it now has a different
+<span class="math inline"><em>π</em> → …→</span> structure.</p></li>
+<li><p><strong>Reality as Modal Consensus:</strong> Perhaps the most
+provocative implication is for the concept of <strong>reality and
+scientific objectivity</strong>. In everyday discourse, we think of
+science as uncovering “the way the world truly is” – an objective
+reality independent of observers. Our account suggests a nuanced
+picture: <strong>reality, as accessible to us, is inherently
+<em>modal</em> and <em>structural</em>.</strong> What we call “objective
+reality” might be identified with the structures in <span
+class="math inline">ℐ</span> that remain invariant under the
+transformations of our interfaces. If every competent observer (with
+similar interfaces) doing careful experiments (through similar
+procedures) arrives at the same core idea (within error margins), that
+idea is what we refer to as a <strong>real fact</strong>. In
+group-theoretic language, reality is an invariant under the group of
+transformations that represent changes of perspective or modality. For
+example, the charge of an electron is “real” because no matter how we
+measure it (within a huge range of methods and modalities), we get the
+same number (within experimental uncertainty). It is interface-invariant
+(or at least interface-covariant with a simple transformation rule). On
+the other hand, something like “color” is not an intrinsic property of
+reality but an interface-dependent construct – different species have
+different color perceptions, and physics tells us color is a mix of
+surface reflectance and lighting and eye response.</p>
+<p>Our model thus aligns with a kind of <strong>pragmatic
+realism</strong> or <strong>structural realism</strong>: there is a
+mind-independent world (<span class="math inline"><em>W</em></span>)
+that constrains what ideas work (we can’t just believe anything; the
+recursive testing would catch us out), but what we <em>mean</em> by
+“real” are those stable patterns that survive all our filtering and seem
+to transcend any one interface. It’s as if reality is the limit of this
+recursive process – the unreachable ideal point where all losses are
+eliminated and the idea matches the world perfectly. We never get there,
+but we get ever closer by expanding interfaces. Indeed, the history of
+science is one of <strong>expanding our interfaces</strong> to get
+closer to reality’s heart (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=In%20adopting%20this%20attitude%2C%20we,new%20%E2%80%9Cphenomenal%20worlds%E2%80%9D%20accessible%20to">The
+Interface Theory of Ideas</a>) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=experience,cognitive%20makeups">The
+Interface Theory of Ideas</a>). We invented microscopes, telescopes,
+cloud chambers, MRI machines – each is a new modality that reveals
+aspects of reality previously filtered out. We developed formalisms like
+complex numbers, Hilbert spaces – new conceptual modalities to
+understand patterns that classical concepts couldn’t capture. Each time,
+we peeled back a bit more of the “decorated veil” (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=Structural%20filtering%20explains%20why%20an,is%20cut%20off%2C%20and%20key">The
+Interface Theory of Ideas</a>)between us and nature. Yet, each time we
+also reveal new mysteries, suggesting the veil, while thinner, is still
+there.</p></li>
+<li><p><strong>Objectivity redefined:</strong> Given this, scientific
+objectivity is not the absence of a perspective, but the
+<strong>synthesis of many perspectives</strong>. An objective claim is
+one that has been tested and seen to hold from many angles – literally
+through different instruments and logically via different derivations.
+In our terms, an idea is objective if it can be projected through
+multiple distinct <span
+class="math inline"><em>E</em><sub><em>m</em></sub></span> and still
+consistently map to the same underlying idea or yield expected results.
+For example, the wave-particle duality of electrons is objective in that
+whether we do an interference experiment or a particle scattering
+experiment, we must use both wave and particle concepts (two different
+modal descriptions) to fully predict outcomes; the electron’s reality is
+something that produces coherent results across those modes, even if no
+single mode (pure particle picture or pure wave picture) suffices alone.
+Thus objectivity comes from this <em>coordination across
+interfaces</em>.</p></li>
+<li><p><strong>Limits of our architecture:</strong> Our model encourages
+us to ask, what if there are aspects of reality that <strong>no
+combination of our current interfaces can capture</strong>? It’s very
+plausible. We may need entirely new primitives <span
+class="math inline"><em>π</em></span> or new forms of <span
+class="math inline"><em>A</em></span> or new modalities to even
+represent certain phenomena. For instance, humans had no way to
+conceptualize quantum entanglement before the mathematics of Hilbert
+spaces and the experiments of the early 20th century gave a new
+interface. If an alien intelligence had different sensory modalities or
+cognitive primitives, might they uncover truths we literally cannot
+represent yet? Our theory answers yes: since <span
+class="math inline">ℐ</span> is built from what we have now, extending
+<span class="math inline"><em>P</em></span> or <span
+class="math inline"><em>M</em></span> might open up an expanded <span
+class="math inline">ℐ′</span> that includes ideas currently unimaginable
+(<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=In%20adopting%20this%20attitude%2C%20we,new%20%E2%80%9Cphenomenal%20worlds%E2%80%9D%20accessible%20to">The
+Interface Theory of Ideas</a>) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=possibility%20and%20epistemic%20humility,or%20in%20technology">The
+Interface Theory of Ideas</a>). This is both exciting and humbling – it
+means the space of possible knowledge is vast and perhaps unbounded, and
+our current science is a subspace carved out by the recursive loop we’ve
+run so far.</p></li>
+<li><p><strong>Self-reference and reflexivity:</strong> Finally, let’s
+reflect on the reflexive aspect: science is part of the world, and
+scientists are agents within <span class="math inline"><em>W</em></span>
+using interfaces (their minds) shaped by evolution for survival, not
+truth per se (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=interfaces%20optimized%20for%20survival%20,it%20mirrors%20an%20objective%20world">The
+Interface Theory of Ideas</a>) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=relativity%20because%20those%20had%20no,on%20survival%20at%20our%20scale">The
+Interface Theory of Ideas</a>). Yet here we are, seemingly accessing
+profound truths about quantum fields and galaxies. This might be seen as
+a happy accident or as evidence that once a basic interface evolved for
+survival (e.g. our senses and brains), it could bootstrap itself through
+tools and abstract ideas into a far more powerful meta-interface
+(science itself). Our recursive model is precisely this bootstrap:
+starting from primitives that helped us not get eaten on the savannah
+(basic perception, counting, etc.), we applied repeated abstraction and
+created new modalities (mathematics, scientific instruments). We
+<em>turned the interface upon itself</em> to amplify its powers – a bit
+like a mind hacking its own limitations. As a result, we greatly
+expanded the range of experiences and ideas (we have “seen”
+gravitational waves with LIGO, something no unaided sense could do; we
+have “felt” the curvature of space-time through equations). This
+suggests a view of the <strong>scientific endeavor as an open-ended
+evolutionary process</strong> – not of organisms, but of interfaces and
+ideas. Each discovery is not just finding a fact, but also often results
+in new questions, new concepts, or new tools (a new interface) that then
+enable further discovery (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=experience,cognitive%20makeups">The
+Interface Theory of Ideas</a>). There’s a creative, almost artistic,
+dimension here: like a recursive art project where the painting draws
+itself by creating new brushes for new details.</p></li>
 </ul>
-<p>This collapses the distinction between epistemic and ontic
-perspectives.</p>
-<h4 id="consequence-4">Consequence:</h4>
+<p>In concluding, we are left with a picture of science that is both
+systematic and poetic. It is systematic in that we can formalize it as a
+well-defined recursive algorithm, an interplay of sets and functions
+rigorously specified. It is poetic in that this algorithm, when
+interpreted, tells the story of <strong>humanity’s quest for
+understanding</strong>: a repeated casting of a net (our interface) into
+the sea of reality, catching some fish (ideas), learning from them,
+repairing and recasting the net in an endless iterative dance. The
+<strong>objectivity</strong> we gain is hard-won – it is the knowledge
+that remains invariant no matter how we twist and turn our lenses. The
+<strong>meaning</strong> we create is relational – a symphony of
+concepts each giving context to the other, not solitary notes. And the
+<strong>reality</strong> we approach is ever the asymptote – we move
+closer but remain at some remove, which perhaps is fortunate, as it
+guarantees an eternal intrigue: there will always be something left to
+discover, as long as we have the curiosity to keep the recursive cycle
+in motion.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>We have developed a monograph-length exploration of
+<strong>Scientific Discovery as Recursive Modal Projection</strong>,
+marrying formal precision with philosophical reflection. By viewing the
+scientific method through the dual lenses of the Formal and Interface
+Theories of Ideas, we arrive at a deeply integrated understanding:
+<em>scientific discovery is a process whereby ideas continually reinvent
+themselves across various modes of representation</em>. Each mode – be
+it seeing, theorizing, experimenting, or remembering – provides a
+partial view, a <strong>modal lens</strong>, onto the underlying
+reality, and only through their repeated interplay do we inch toward a
+more complete picture.</p>
+<p>This framework yields several <strong>transformative
+insights</strong>. It dissolves the rigid stepwise image of the
+scientific method into a <strong>flexible, looping architecture</strong>
+where any step can prompt revisiting any other. It formally encodes why
+science is <em>not</em> a straightforward march to truth, but a winding
+path shaped by the <strong>constraints of our interfaces</strong> – our
+senses, our languages, our mathematical tools all limit and guide what
+we find. It reveals scientific progress as <strong>interface
+expansion</strong>: when our current modalities fall short (as when
+Newtonian mechanics couldn’t explain Mercury’s orbit), we innovate new
+ones (Einstein’s spacetime conception) and thereby capture new aspects
+of reality. In doing so we echo the adaptive creativity of life itself,
+which evolves new organs to sense and adapt. The <em>recursive modal
+projection</em> model can thus be seen as an epistemic analogue of
+evolution: variation (new hypotheses) and selection (experiments)
+operating on ideas, with memory preserving the gains. What survives is
+not “truth” in an absolute sense, but a hardy <strong>structure of
+ideas</strong> that has weathered many projections and remains
+coherent.</p>
+<p>Finally, our journey invites a humbling yet inspiring perspective on
+the <strong>nature of scientific objectivity and reality</strong>. We
+come to recognize objectivity not as a god’s-eye view from nowhere, but
+as a <strong>consensus from everywhere</strong> – the convergence of
+many subjective viewpoints through communication and testing. And we
+recognize reality’s truths not as jewels lying ready to be picked, but
+as sculptures we reveal with careful chisel strokes, knowing full well
+that the sculpture is shaped by our tools even as it reflects an
+underlying form. The <strong>architecture we proposed – of <span
+class="math inline"><em>π</em></span>, <span
+class="math inline"><em>A</em></span>, <span
+class="math inline"><em>E</em><sub><em>m</em></sub></span>, and <span
+class="math inline"><em>C</em></span> – bridges mind and world</strong>
+without collapsing one into the other. There <em>is</em> a world that
+constrains our experiences, but everything we know of it comes through
+our self-made filters. Appreciating this, we can avoid both arrogant
+scientism (the illusion that we have final answers) and cynical
+relativism (the despair that it’s all arbitrary). Instead, we adopt what
+the Interface Theory terms <strong>epistemic humility</strong> (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=human%20,that%20were%20invisible%20to%20us">The
+Interface Theory of Ideas</a>) (<a
+href="https://midhunpradeep.github.io/formal-theory-of-ideas/interface-theory-of-ideas.html#:~:text=art%20,or%20in%20technology">The
+Interface Theory of Ideas</a>): a stance that celebrates the incredible
+<strong>effectiveness</strong> of our recursive interface (science has
+unlocked wonders, from quantum theory to genetic medicine) while also
+acknowledging its <strong>limitations</strong> (there may be phenomena
+we can’t even articulate yet).</p>
+<p>In closing, the recursive modal model of discovery is more than a
+philosophical curiosity; it has practical resonance. It suggests that to
+foster discovery, one should cultivate diversity in modalities –
+encourage looking at problems visually, analytically, experimentally,
+introspectively, etc., because each modal projection might reveal a new
+pattern. It suggests that education in science should not just impart
+facts, but teach the young scientist how to <strong>navigate
+interfaces</strong>: how to observe keenly, abstract insightfully,
+experiment cleverly, analyze honestly, and remember usefully. And it
+offers a unifying language for talking about breakthroughs in different
+fields, from AI (where multi-modal learning is becoming key) to
+cognitive science (understanding how humans solve problems by shifting
+perspectives). All these can be seen as instances of the same core
+algorithm we have detailed.</p>
+<p>Ultimately, <em>Scientific Discovery as Recursive Modal
+Projection</em> paints a picture of science as a living, breathing
+<strong>conversation between the human mind and the universe</strong>,
+moderated by the structures of thought and perception. It is a
+conversation in which each question asked is shaped by how it is asked,
+and each answer leads to new questions by altering the very lens through
+which we ask. And yet, through this recursive dance, we have been able
+to approximate a stunning tapestry of understanding – one that, while
+woven by us, captures real patterns that extend far beyond us. In the
+spirit of this realization, we conclude with a metaphorical
+reflection:</p>
 <blockquote>
-<p>We do not perceive reality.<br />
-We interface with it—and what survives that interface <em>becomes</em>
-reality for the system.</p>
+<p><strong>Scientific knowledge is like a cathedral built of
+ideas</strong>, each arch and buttress an abstract concept supported by
+observations as foundation stones. We construct it with imperfect tools
+– chisels that chip and molds that compress – yet as it rises higher, we
+see more of the horizon. We cannot soar above and view the whole
+blueprint from the sky; we only see it from within. But over centuries,
+by adding perspective upon perspective, we inch closer to a divine view
+– never fully there, but enough to sense the grandeur of the reality we
+strive to know. Each of us is both prisoner and architect of our
+interfaces, but together, recursively, we <strong>build windows in the
+walls of our understanding</strong>, letting the light of reality
+illuminate our collective mind.</p>
 </blockquote>
-<hr />
-<h3 id="science-without-foundationalism"><strong>5.4 Science Without
-Foundationalism</strong></h3>
-<p>If all knowledge is filtered expression, then:</p>
-<ul>
-<li>There are no self-evident truths</li>
-<li>There are no privileged modalities</li>
-<li>There are no unfiltered structures</li>
-</ul>
-<p>Thus, science is <strong>not built on foundations</strong>. It is
-<strong>grown from survivable roots</strong>:</p>
-<ul>
-<li>Pattern → Projection → Feedback → Memory → Repatterning</li>
-</ul>
-<p>The system grows itself from within, shaped only by feedback and
-loss.</p>
-<h4 id="consequence-5">Consequence:</h4>
-<blockquote>
-<p>Scientific knowledge is not foundational—it is
-<strong>evolutionary</strong>.<br />
-Truth is not assumed—it is <strong>compressed
-survivability</strong>.</p>
-</blockquote>
-<hr />
-<h3 id="consciousness-as-the-systems-interface-to-itself"><strong>5.5
-Consciousness as the System’s Interface to Itself</strong></h3>
-<p>When a system projects into memory, evaluates the result, and
-recursively refines its patterns, it achieves what in our terms
-constitutes <strong>modal self-observation</strong>.</p>
-<p>This gives rise to: - Internal time - Persistent identity -
-Error-corrective learning - Cross-modal coherence</p>
-<p>Which together resemble: &gt; The <strong>phenomenological structure
-of consciousness</strong>—not as an essence, but as <strong>a functional
-circuit of recursive projection</strong>.</p>
-<hr />
-<h2 id="conclusion-and-future-research"><strong>6. Conclusion and Future
-Research</strong></h2>
-<hr />
-<h3 id="summary-of-the-theory"><strong>6.1 Summary of the
-Theory</strong></h3>
-<p>This paper introduced a formal framework that models the scientific
-discovery process as <strong>recursive modal projection</strong>. Built
-upon the Interface Theory of Ideas, where all knowledge is structured
-recursively through abstraction, we reinterpreted each phase of
-scientific reasoning—generation, projection, evaluation, refinement, and
-memory—as a <strong>modality</strong>: a structural interface that
-filters and transforms ideas through loss.</p>
-<p>Each modality was defined formally via an expression function ( E_m )
-and a loss function ( L_m ), and shown to play an active, composable
-role in the recursive evolution of structured knowledge. This reframe
-allowed us to unify:</p>
-<ul>
-<li>Internal and external reasoning<br />
-</li>
-<li>Learning and forgetting<br />
-</li>
-<li>Objectivity and coherence<br />
-</li>
-<li>Truth and survivability</li>
-</ul>
-<p>The scientific method thus becomes a <strong>self-adaptive,
-structural loop</strong>—no longer a static procedure, but a recursive
-system evolving by expressing, surviving, and refining patterns of
-thought.</p>
-<hr />
-<h3 id="theoretical-contributions"><strong>6.2 Theoretical
-Contributions</strong></h3>
-<ol type="1">
-<li><p><strong>Modal Reframing of Discovery:</strong><br />
-Each phase of scientific cognition was formalized as a modality with
-structural behavior, yielding a unified architecture for reasoning and
-learning.</p></li>
-<li><p><strong>Loss as Feedback Engine:</strong><br />
-We showed that projection loss is not noise but signal, guiding
-refinement and enabling dynamic reconstruction of structure.</p></li>
-<li><p><strong>Memory as Modal Interface:</strong><br />
-Memory was elevated from storage to a projective interface that
-expresses and degrades internal structure, enabling self-consistent
-evolution over time.</p></li>
-<li><p><strong>Cross-Modal Coherence as Objectivity:</strong><br />
-We proposed a model of truth and knowledge based on survivability across
-multiple expressive constraints, rather than foundational
-assumptions.</p></li>
-<li><p><strong>Scientific Systems as Self-Recursive
-Agents:</strong><br />
-Discovery was reframed as a recursive system where all knowledge is
-filtered structure, constantly mutating and refining through
-feedback.</p></li>
-</ol>
-<hr />
-<h3 id="future-directions"><strong>6.3 Future Directions</strong></h3>
-<p>This framework opens several new avenues for theoretical and
-practical exploration:</p>
-<ul>
-<li><p><strong>Formal Learning Systems:</strong><br />
-Constructing agents whose reasoning architectures mirror this modal
-loop—capable of generating, projecting, evaluating, and refining ideas
-autonomously.</p></li>
-<li><p><strong>Modal Quantification:</strong><br />
-Developing measures for modal expressiveness, structural entropy, and
-feedback reactivity to characterize systems and knowledge
-states.</p></li>
-<li><p><strong>Cross-Modal Discovery Tools:</strong><br />
-Designing human–AI collaboration systems where reasoning traverses
-modalities such as language, simulation, and intuition.</p></li>
-<li><p><strong>Memory Topologies:</strong><br />
-Investigating how different memory architectures (hierarchical,
-distributed, pattern-based) affect modal retention and idea
-evolution.</p></li>
-<li><p><strong>Synthetic Consciousness:</strong><br />
-Probing whether systems with full recursive modal access and loss-aware
-reasoning can exhibit emergent traits associated with consciousness or
-self-reference.</p></li>
-<li><p><strong>Mathematics of Modal Circuits:</strong><br />
-Establishing category-theoretic or topological models of modal traversal
-to understand the landscape of scientific reasoning more
-abstractly.</p></li>
-</ul>
-<hr />
-<h3 id="closing-remark"><strong>6.4 Closing Remark</strong></h3>
-<blockquote>
-<p>Science, in this model, is not a process for discovering truth.<br />
-It is a recursive game of <strong>structure and survival</strong>.<br />
-Theories are not statements—they are <strong>patterns that endured
-projection</strong>.</p>
-</blockquote>
-<p>Every idea we hold, remember, express, or test is just a thread in a
-larger tapestry—<br />
-woven through recursive filters, shaped by what remains.</p>
-<p>We are not agents of truth.<br />
-We are <strong>interfaces</strong> through which structure evolves.</p>
 </body>
 </html>
