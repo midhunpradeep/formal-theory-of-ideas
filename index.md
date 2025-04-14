@@ -10,7 +10,7 @@
 - [The Interface Theory of Ideas - The More Interesting One](interface-theory-of-ideas.html)
 - [Scientific Discovery as Recursive Modal Projection](scientific-discovery-as-recursive-modal-projection.html)
 - [Survivable Structure - A Short Essay on the Survivability of Ideas across Modalities](survivable-structure.html)
-- [The Shape of Meaning: Modalities, Spacetime, and the Projection of Structure](the-shape-of-meaning.md)
+- [The Shape of Meaning: Modalities, Spacetime, and the Projection of Structure](the-shape-of-meaning.html)
 
 ### What is this? Who the heck are you?
 
