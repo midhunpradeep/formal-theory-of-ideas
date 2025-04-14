@@ -1,6 +1,8 @@
 # A Formal Theory of Ideas
 
-## Contents
+## If this may exist, why not more?
+
+### Contents
 
 - [README](README.html)
 - [LICENSE](LICENSE.html)
@@ -8,7 +10,7 @@
 - [The Interface Theory of Ideas - The More Interesting One](interface-theory-of-ideas.html)
 - [Scientific Discovery as Recursive Modal Projection](scientific-discovery-as-recursive-modal-projection.html)
 
-## What is this? Who the heck are you?
+### What is this? Who the heck are you?
 
 I'm Midhun—a student of Computer Science by training, and a reluctant philosopher by pattern. These papers began as nothing more than late-night sparks: strange thoughts I didn’t yet know how to hold in language, let alone publish. 
 
