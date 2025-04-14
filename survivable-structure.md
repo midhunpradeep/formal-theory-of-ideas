@@ -109,7 +109,3 @@ And wherever projections converge, knowledge arises.
 
 > The world we know is not what is.  
 > It is what survived—across filters, across minds, across time.
-
----
-
-Would you like this essay saved and appended to the primary paper file? Or kept as a separate artifact?
