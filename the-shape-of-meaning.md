@@ -102,13 +102,3 @@ This removes the need for:
 - Objective identity
 
 Instead, we build an **ecology of interpretable structure**—what survives is what can be felt, named, repeated, and recombined.
-
----
-
-### ✦ Next Steps
-
-From here, we can:
-- Formalize modalities as **structures embedded in environments** (e.g. spacetime, mind, culture)
-- Define **modal neighborhoods**: sets of structures with overlapping survivability patterns
-- Model **semantic drift** as projection mutation
-- Reframe physical law, perception, and communication as **modal constraints on abstraction trees**
